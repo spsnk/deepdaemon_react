@@ -50,6 +50,7 @@ hr:before {
   height: 2px;
   background: #ccc;
 }
+
 hr {
   position: relative;
   display: block;
