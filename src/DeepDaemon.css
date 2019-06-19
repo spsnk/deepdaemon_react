@@ -1,0 +1,81 @@
+.DeepDaemon {
+  text-align: center;
+}
+
+.ddlogo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 30vmin;
+  pointer-events: none;
+}
+
+.dd_header {
+	background: url(./assets/img/bg/header_bg.png) no-repeat center top;
+  text-align:center;
+  padding-top: 5vh;
+	background-position: center center;
+	min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.dd_header h1 {
+	font-size: 40px;
+	font-weight: 400;
+	text-align: center;
+	line-height: 40px;
+	letter-spacing: 3px;
+	margin: 15px;
+}
+
+.dd_header p {
+	font-size: 30px;
+	font-weight: 400;
+	text-align: center;
+	line-height: 40px;
+	letter-spacing: 3px;
+	margin: 15px;
+}
+
+hr:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background: #ccc;
+}
+hr {
+  position: relative;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+  width: 100%;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
