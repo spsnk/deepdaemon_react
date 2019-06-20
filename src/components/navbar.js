@@ -8,7 +8,7 @@ const navigation = () => {
         <Navbar bg="dark" variant="dark">
             <Container>
                 <Navbar.Brand href="#home">
-                    <span className="icon icon-stack"> </span>
+                    <span className="icon icon-rocket"> </span>
                     DeepDaemon
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>

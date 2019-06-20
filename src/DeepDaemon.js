@@ -3,10 +3,12 @@ import logo from './assets/img/logo.png';
 import './DeepDaemon.css';
 import Navbar from './components/navbar';
 import 'bootstrap/dist/css/bootstrap.css';
-import './assets/icomoon/icomoon.css'
+import './assets/icomoon/icomoon.css'; //https://icomoon.io/#preview-free
 import Section from './components/section';
-import Col from 'react-bootstrap/Col'
-import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import projects_data from './data/projects.json';
+import Proyects from './components/proyect_card'
 
 function DeepDaemon() {
   return (
@@ -43,7 +45,7 @@ function DeepDaemon() {
               </p>
           </Col>
           <Col>
-          <span className="icon icon-stack"></span>
+          <span className="icon icon-quill"></span>
               <h2>Misión</h2>
               <p>
                 Desarrollar sistemas inteligentes basados en redes neuronales profundas que puedan
@@ -74,10 +76,10 @@ function DeepDaemon() {
       <Section className="portfolio" id="portfolio">
         <h1>Proyectos increibles</h1>
         <hr/>
-        
+        <Proyects proyects={projects_data}/>
       </Section>
     </div>
   );
-}
+};
 
 export default DeepDaemon;

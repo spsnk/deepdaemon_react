@@ -96,18 +96,22 @@ hr {
   display: flex;
 }
 
+.section .icon {
+	font-size: 50px;
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+
 .white {
   color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  color: white;
+.projects_container {
+  display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  margin: 25px;
 }
 
 /*@keyframes App-logo-spin {
