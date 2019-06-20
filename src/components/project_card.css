@@ -1,10 +1,14 @@
-.card-footer {
+.project .card-footer {
     margin-top: -63px;
     text-align: right;
 }
 
-.card {
+.project.card {
     min-width: 350px;
     width: 350px;
     margin: 15px;
+}
+
+.project.card:hover  {
+    border: 1px solid black ;
 }

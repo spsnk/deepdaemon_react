@@ -1,35 +1,35 @@
-[
-    {
-        "key":"proyect1",
-        "name":"Nombre de proyecto",
-        "short":"Descripción corta del proyecto",
-        "front_img":"project_front.jpg",
-        "long":"Descripcion larga del proyecto",
-        "modal_img":"project_modal.jpg",
-        "impact":"Impacto del proyecto",
-        "tech":[{"techname":"Tecnologia","icon":"icon.png"}],
-        "link":"https://spsnk.github.io/deepdaemon/"
-    },
-    {
-        "key":"proyect2",
-        "name":"Nombre de proyecto",
-        "short":"Descripción corta del proyecto",
-        "front_img":"project_front.jpg",
-        "long":"Descripcion larga del proyecto",
-        "modal_img":"project_modal.jpg",
-        "impact":"Impacto del proyecto",
-        "tech":[{"techname":"Tecnologia","icon":"icon.png"}],
-        "link":"https://spsnk.github.io/deepdaemon/"
-    },
-    {
-        "key":"proyect3",
-        "name":"Nombre de proyecto",
-        "short":"Descripción corta del proyecto",
-        "front_img":"project_front.jpg",
-        "long":"Descripcion larga del proyecto",
-        "modal_img":"project_modal.jpg",
-        "impact":"Impacto del proyecto",
-        "tech":[{"techname":"Tecnologia","icon":"icon.png"}],
-        "link":"https://spsnk.github.io/deepdaemon/"
-    }
-]
+{
+    "proyect1":
+        {
+            "name":"Nombre de proyecto",
+            "short":"Descripción corta del proyecto",
+            "front_img":"project_front.jpg",
+            "long":"Descripcion larga del proyecto",
+            "modal_img":"project_modal.jpg",
+            "impact":"Impacto del proyecto",
+            "tech":[{"techname":"Tecnologia","icon":"icon.png"}],
+            "link":"https://spsnk.github.io/deepdaemon/"
+        },
+    "proyect2":
+        {
+            "name":"Nombre de proyecto",
+            "short":"Descripción corta del proyecto",
+            "front_img":"project_front.jpg",
+            "long":"Descripcion larga del proyecto",
+            "modal_img":"project_modal.jpg",
+            "impact":"Impacto del proyecto",
+            "tech":[{"techname":"Tecnologia","icon":"icon.png"}],
+            "link":"https://spsnk.github.io/deepdaemon/"
+        },
+    "proyect3":
+        {
+            "name":"Nombre de proyecto",
+            "short":"Descripción corta del proyecto",
+            "front_img":"project_front.jpg",
+            "long":"Descripcion larga del proyecto",
+            "modal_img":"project_modal.jpg",
+            "impact":"Impacto del proyecto",
+            "tech":[{"techname":"Tecnologia","icon":"icon.png"}],
+            "link":"https://spsnk.github.io/deepdaemon/"
+        }
+}

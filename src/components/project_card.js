@@ -1,16 +1,17 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import CardColumns from 'react-bootstrap/CardColumns'
 import Button from 'react-bootstrap/Button';
 import './project_card.css';
 
 const Project_card = ({projects}) => (  
-    <CardColumns>
+    <>
         {
-            projects.map(project => (
-                <Card key={project.key}>
-                    <Card.Header>{project.name}</Card.Header>
-                    <Card.Img variant="bottom" src={require(`../assets/img/projects/${project.front_img}`)} alt={project.front_img} />
+            Object.keys(projects).map(key => (
+                <Card key={key} className="project">
+                    <Card.Header>
+                        {projects[key].name}
+                    </Card.Header>
+                    <Card.Img variant="bottom" src={require(`../assets/img/projects/${projects[key].front_img}`)} alt={projects[key].front_img} />
                     <Card.Footer>
                         <Button variant="primary">Ver más...</Button>
                     </Card.Footer>
@@ -18,6 +19,6 @@ const Project_card = ({projects}) => (
                 )
             )
         }
-    </CardColumns>
+    </>
 );
 export default Project_card;
