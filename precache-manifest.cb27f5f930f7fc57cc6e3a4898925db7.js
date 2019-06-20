@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1fe7cc5248b650837aafd1997ee1bc66",
+    "revision": "2c190978bbc4ef6edeff336aa43822ef",
     "url": "/deepdaemon_react/index.html"
   },
   {
-    "revision": "eb1a55623ed3a0a0412d",
+    "revision": "f3b29f428e06fd4d4642",
     "url": "/deepdaemon_react/static/css/2.22a7d4ef.chunk.css"
   },
   {
-    "revision": "098ec554a8cea58549de",
-    "url": "/deepdaemon_react/static/css/main.6e55f3bf.chunk.css"
+    "revision": "242a69042f36e5226ad0",
+    "url": "/deepdaemon_react/static/css/main.84cb3312.chunk.css"
   },
   {
-    "revision": "eb1a55623ed3a0a0412d",
-    "url": "/deepdaemon_react/static/js/2.86e53ee2.chunk.js"
+    "revision": "f3b29f428e06fd4d4642",
+    "url": "/deepdaemon_react/static/js/2.f86eee8c.chunk.js"
   },
   {
-    "revision": "098ec554a8cea58549de",
-    "url": "/deepdaemon_react/static/js/main.b93b8f67.chunk.js"
+    "revision": "242a69042f36e5226ad0",
+    "url": "/deepdaemon_react/static/js/main.1cb074fb.chunk.js"
   },
   {
     "revision": "f98d519371d5cbee753b",
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3a211cc5cd36d759093aed4c7ef0cfcd",
     "url": "/deepdaemon_react/static/media/academy_bg.3a211cc5.jpg"
+  },
+  {
+    "revision": "40a7f3acd596c8edbaa0a347583bbc4e",
+    "url": "/deepdaemon_react/static/media/carlosdm.40a7f3ac.jpg"
   },
   {
     "revision": "fe08354defbb4897e4f44d83fa63917f",
@@ -58,6 +62,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4e62c623ecf21c74719823881cf3a8e0",
     "url": "/deepdaemon_react/static/media/logo.4e62c623.png"
+  },
+  {
+    "revision": "d5d9fd08a11591a5117f3cd040ebb4b0",
+    "url": "/deepdaemon_react/static/media/marcoma.d5d9fd08.jpg"
   },
   {
     "revision": "f8fc7de735d1fc2c134ba07cccba5356",
