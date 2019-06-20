@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button';
 import CardDeck from 'react-bootstrap/CardDeck';
+import CardGroup from 'react-bootstrap/CardGroup';
 import CardColumns from 'react-bootstrap/CardColumns';
 
 import logo from './assets/img/logo.png';
@@ -117,19 +118,19 @@ function DeepDaemon() {
           </h2>
         </Container>
       </Container>
-      <Container className="section"  id="team">
+      <Container className="section"  id="leaders">
         <h1>Los líderes</h1>
         <hr/>
         <CardDeck>
           <Team team={leader_data}/>
         </CardDeck>
       </Container>
-      <Container fluid className="section" >
+      <Container fluid className="section" id="team">
         <h1>Las Promesas</h1>
         <hr/>
-        <CardColumns>
-          <Team team={team_data}/>
-        </CardColumns>
+        <CardGroup>
+          <Team team={team_data} sort/>
+        </CardGroup>
       </Container>
       <Container fluid className="section contact white" id="contact">
         <h1>Hecho en la Ciudad de México</h1>
