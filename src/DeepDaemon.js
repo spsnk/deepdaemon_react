@@ -4,6 +4,8 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button';
+import CardDeck from 'react-bootstrap/CardDeck';
+import CardColumns from 'react-bootstrap/CardColumns';
 
 import logo from './assets/img/logo.png';
 import join from './assets/img/join_team.png';
@@ -12,9 +14,12 @@ import './assets/icomoon/icomoon.css'; //https://icomoon.io/#preview-free
 
 import './DeepDaemon.css';
 import Navbar from './components/navbar';
-import Section from './components/section';
-import projects_data from './data/projects.json';
 import Projects from './components/project_card';
+import Team from './components/team_card';
+
+import projects_data from './data/projects.json';
+import leader_data from './data/leaders.json';
+import team_data from './data/team.json';
 
 function DeepDaemon() {
   return (
@@ -30,15 +35,15 @@ function DeepDaemon() {
           Comunidad de conocimiento
         </h2>
       </header>
-      <Section id="about">
+      <Container className="section" id="about">
         <h1>Un poco sobre nosotros</h1>
         <hr/>
         <p>Somos un grupo de trabajo que busca vincular el desarrollo científico con el desarrollo 
           de soluciones industriales para generar tecnología de punta y capital humano de alto 
           impacto en el ámbito académico e industrial.
         </p>
-      </Section>
-      <Section>
+      </Container>
+      <Container className="section" >
         <Row>
           <Col>
             <span className="icon icon-eye "></span>
@@ -68,29 +73,31 @@ function DeepDaemon() {
             </p>
           </Col>
         </Row>
-      </Section>
+      </Container>
       <Container fluid className="academy">
-        <Section className="white"> 
+        <Container className="section white"> 
           <h1>La Investigación no solo es académica</h1>
           <hr/>
           <p>
             Por eso creamos un grupo de investigación que tiene como objetivo usar la inteligencia
             artificial para resolver problemas de la industria.
           </p>
-        </Section>
+        </Container>
       </Container>
-      <Section className="portfolio" id="portfolio">
+      <Container className="section portfolio" id="portfolio">
         <h1>Proyectos increibles</h1>
         <hr/>
-        <Projects projects={projects_data}/>
-      </Section>
-      <Section>
+        <CardColumns>
+          <Projects projects={projects_data}/>
+        </CardColumns>
+      </Container>
+      <Container className="section" >
         <Row>
           <Col md="auto">
             <Image src={join} style={{height:"350px"}} fluid />
           </Col>
           <Col>
-            <h1>Unete al equipo!</h1>
+            <h1>Únete al equipo!</h1>
             <p>
               Si eres estudiante de Licenciatura o Posgrado en el IPN, o estás interesdo en 
               complementar tu educación con un postgrado en el Centro de Investigación en Computación,
@@ -100,15 +107,29 @@ function DeepDaemon() {
             <Button variant="secondary">Contáctanos</Button>
           </Col>
         </Row>
-      </Section>
-      <Container fluid className="team">
-        <Section className="white"> 
+      </Container>
+      <Container fluid className="team_separator">
+        <Container className="section white"> 
           <h1>Inteligencia colectiva</h1>
           <hr/>
           <h2>
             Alumnos e Investigadores colaborando para resolver problemas multidisciplinarios.
           </h2>
-        </Section>
+        </Container>
+      </Container>
+      <Container className="section"  id="team">
+        <h1>Los líderes</h1>
+        <hr/>
+        <CardDeck>
+          <Team team={leader_data}/>
+        </CardDeck>
+      </Container>
+      <Container className="section" >
+        <h1>Las Promesas</h1>
+        <hr/>
+        <CardColumns>
+          <Team team={team_data}/>
+        </CardColumns>
       </Container>
 
     </div>

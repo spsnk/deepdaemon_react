@@ -79,7 +79,6 @@ hr {
   font-weight: 300;
   margin-top: auto;
   margin-bottom: auto;
-  display: flex;
 }
 
 .section h1 {
@@ -93,7 +92,7 @@ hr {
   align-items: stretch;
   display: flex;
 }
-.team {
+.team_separator {
   background-image: url('./assets/img/bg/todos_2018_bg.jpg');
   background-position: top center;
   min-height: 300px;
@@ -110,6 +109,8 @@ hr {
 .white {
   color: white;
 }
+
+@import url('https://use.fontawesome.com/releases/v5.0.10/css/all.css');
 
 /*@keyframes App-logo-spin {
   from {
