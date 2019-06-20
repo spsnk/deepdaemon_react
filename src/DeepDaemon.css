@@ -86,8 +86,6 @@ hr {
   text-transform: uppercase;
 }
 
-
-
 .academy {
   background-image: url('./assets/img/bg/academy_bg.jpg');
   background-position: center center;
@@ -111,14 +109,6 @@ hr {
 
 .white {
   color: white;
-}
-
-.projects_container {
-  display: flex;
-}
-
-.card {
-  margin: 15px;
 }
 
 /*@keyframes App-logo-spin {

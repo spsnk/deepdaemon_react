@@ -1,0 +1,10 @@
+.card-footer {
+    margin-top: -63px;
+    text-align: right;
+}
+
+.card {
+    min-width: 350px;
+    width: 350px;
+    margin: 15px;
+}

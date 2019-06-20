@@ -7,11 +7,11 @@ const navigation = () => {
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
+                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Brand href="#home">
                     <span className="icon icon-rocket"> </span>
                     DeepDaemon
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Nav className="mr-auto">
                     <Nav.Link href="#home">Home</Nav.Link>
                     <Nav.Link href="#about">Nosotros</Nav.Link>

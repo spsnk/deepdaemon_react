@@ -14,7 +14,7 @@ import './DeepDaemon.css';
 import Navbar from './components/navbar';
 import Section from './components/section';
 import projects_data from './data/projects.json';
-import Proyects from './components/proyect_card';
+import Projects from './components/project_card';
 
 function DeepDaemon() {
   return (
@@ -82,7 +82,7 @@ function DeepDaemon() {
       <Section className="portfolio" id="portfolio">
         <h1>Proyectos increibles</h1>
         <hr/>
-        <Proyects proyects={projects_data}/>
+        <Projects projects={projects_data}/>
       </Section>
       <Section>
         <Row>
@@ -92,7 +92,7 @@ function DeepDaemon() {
           <Col>
             <h1>Unete al equipo!</h1>
             <p>
-              Si eres estudiante de Licenciatura o Postgrado en el IPN, o estás interesdo en 
+              Si eres estudiante de Licenciatura o Posgrado en el IPN, o estás interesdo en 
               complementar tu educación con un postgrado en el Centro de Investigación en Computación,
               y quieres desarrollar proyectos de IA aplicados a problemas reales o industriales, 
               te estamos buscando.
