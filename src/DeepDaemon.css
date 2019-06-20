@@ -110,6 +110,19 @@ hr {
   color: white;
 }
 
+.contact {
+  background-image: url('./assets/img/bg/contact_bg.jpg');
+  background-position: center center;
+  height: 30rem;
+  padding: 5rem 0;
+}
+.contact .icon {
+	font-size: 1.2rem;
+	line-height: 30px;
+  margin-bottom: 10px;
+  padding: 0 0.5rem;
+}
+
 @import url('https://use.fontawesome.com/releases/v5.0.10/css/all.css');
 
 /*@keyframes App-logo-spin {

@@ -23,7 +23,7 @@ import team_data from './data/team.json';
 
 function DeepDaemon() {
   return (
-    <div className="DeepDaemon">
+    <div className="DeepDaemon" id="home">
       <Navbar/>
       <header className="dd_header">
         <img src={logo} className="ddlogo" alt="logo" />
@@ -124,14 +124,27 @@ function DeepDaemon() {
           <Team team={leader_data}/>
         </CardDeck>
       </Container>
-      <Container className="section" >
+      <Container fluid className="section" >
         <h1>Las Promesas</h1>
         <hr/>
         <CardColumns>
           <Team team={team_data}/>
         </CardColumns>
       </Container>
-
+      <Container fluid className="section contact white" id="contact">
+        <h1>Hecho en la Ciudad de México</h1>
+        <hr/>
+        <p>
+          <span className="icon icon-home"/> 
+          Av. Juan de Dios Bátiz, Esq. Miguel Othón de Mendizábal,<br/> 
+          Col. Nueva Industrial Vallejo, Delegación Gustavo A. Madero. CDMX
+        </p>
+        <p><span className="icon icon-phone"/>57296000</p>
+        <p><span className="icon icon-envelop"/>contacto@deepdaemon.org </p>
+        <p><a className="icon icon-twitter" href="#"></a> | <a className="icon icon-facebook" href="#"></a></p>
+        <hr/>
+      <footer>DeepDaemon &copy; 2019</footer>
+      </Container>
     </div>
   );
 };
