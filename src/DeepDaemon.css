@@ -43,7 +43,8 @@ h2 {
 
 p {
 	text-align: center;
-	margin: 15px;
+  margin: 15px;
+  margin-bottom: 25px;
 }
 
 hr:before {
@@ -68,16 +69,17 @@ hr {
 }
 
 .section {
-  padding: 25px 0 ;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 1.2em;
+  font-size: 16px;
   letter-spacing: 1px;
   font-weight: 300;
-  margin: 0;
-  padding: 0 25%;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
 }
 
 .section h1 {
@@ -90,6 +92,8 @@ hr {
   background-image: url('./assets/img/bg/academy_bg.jpg');
   background-position: center center;
   min-height: 300px;
+  align-items: stretch;
+  display: flex;
 }
 
 .white {

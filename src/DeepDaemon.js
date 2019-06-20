@@ -61,13 +61,20 @@ function DeepDaemon() {
           </Col>
         </Row>
       </Section>
-      <Section className="academy white"> 
+      <div className="academy">
+      <Section className="white"> 
         <h1>La Investigación no solo es académica</h1>
         <hr/>
         <p>
           Por eso creamos un grupo de investigación que tiene como objetivo usar la inteligencia
           artificial para resolver problemas de la industria.
         </p>
+      </Section>
+      </div>
+      <Section className="portfolio" id="portfolio">
+        <h1>Proyectos increibles</h1>
+        <hr/>
+        
       </Section>
     </div>
   );
