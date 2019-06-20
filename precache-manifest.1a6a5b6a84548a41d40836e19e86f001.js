@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d3b948ce7d77aed35af4d80757a38ac3",
+    "revision": "dfd41735e275f8975029ffb33fb91bd5",
     "url": "/deepdaemon_react/index.html"
   },
   {
-    "revision": "1af752e6b2543b618afb",
+    "revision": "9c46217a66cefd76cc9b",
     "url": "/deepdaemon_react/static/css/2.22a7d4ef.chunk.css"
   },
   {
-    "revision": "8b41ebe707f425622b11",
-    "url": "/deepdaemon_react/static/css/main.5cda4168.chunk.css"
+    "revision": "e7f157aa6cb2114c6a81",
+    "url": "/deepdaemon_react/static/css/main.b12b078f.chunk.css"
   },
   {
-    "revision": "1af752e6b2543b618afb",
-    "url": "/deepdaemon_react/static/js/2.5f692dec.chunk.js"
+    "revision": "9c46217a66cefd76cc9b",
+    "url": "/deepdaemon_react/static/js/2.948e9611.chunk.js"
   },
   {
-    "revision": "8b41ebe707f425622b11",
-    "url": "/deepdaemon_react/static/js/main.af25dd27.chunk.js"
+    "revision": "e7f157aa6cb2114c6a81",
+    "url": "/deepdaemon_react/static/js/main.c33677a2.chunk.js"
   },
   {
     "revision": "f98d519371d5cbee753b",
@@ -52,6 +52,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/deepdaemon_react/static/media/icomoon.d765de79.eot"
   },
   {
+    "revision": "2d9838554144682e4bd9c92cbd8b7e20",
+    "url": "/deepdaemon_react/static/media/join_team.2d983855.png"
+  },
+  {
     "revision": "4e62c623ecf21c74719823881cf3a8e0",
     "url": "/deepdaemon_react/static/media/logo.4e62c623.png"
   },
@@ -62,5 +66,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "cb9b2d3ea16b3e5f6c57205301cf540e",
     "url": "/deepdaemon_react/static/media/project_modal.cb9b2d3e.jpg"
+  },
+  {
+    "revision": "abfc92218aa38ede8a967b035222cd44",
+    "url": "/deepdaemon_react/static/media/todos_2018_bg.abfc9221.jpg"
   }
 ]);

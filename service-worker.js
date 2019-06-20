@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/deepdaemon_react/precache-manifest.bb8f98edb5da8d3b0d25fa16fc5cf44e.js"
+  "/deepdaemon_react/precache-manifest.1a6a5b6a84548a41d40836e19e86f001.js"
 );
 
 self.addEventListener('message', (event) => {
