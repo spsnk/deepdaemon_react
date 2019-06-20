@@ -1,12 +1,18 @@
 import React from 'react';
-import logo from './assets/img/logo.png';
-import './DeepDaemon.css';
-import Navbar from './components/navbar';
-import 'bootstrap/dist/css/bootstrap.css';
-import './assets/icomoon/icomoon.css'; //https://icomoon.io/#preview-free
-import Section from './components/section';
+import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Image from 'react-bootstrap/Image'
+import Button from 'react-bootstrap/Button';
+
+import logo from './assets/img/logo.png';
+import join from './assets/img/join_team.png';
+import 'bootstrap/dist/css/bootstrap.css';
+import './assets/icomoon/icomoon.css'; //https://icomoon.io/#preview-free
+
+import './DeepDaemon.css';
+import Navbar from './components/navbar';
+import Section from './components/section';
 import projects_data from './data/projects.json';
 import Proyects from './components/proyect_card';
 
@@ -63,21 +69,48 @@ function DeepDaemon() {
           </Col>
         </Row>
       </Section>
-      <div className="academy">
-      <Section className="white"> 
-        <h1>La Investigación no solo es académica</h1>
-        <hr/>
-        <p>
-          Por eso creamos un grupo de investigación que tiene como objetivo usar la inteligencia
-          artificial para resolver problemas de la industria.
-        </p>
-      </Section>
-      </div>
+      <Container fluid className="academy">
+        <Section className="white"> 
+          <h1>La Investigación no solo es académica</h1>
+          <hr/>
+          <p>
+            Por eso creamos un grupo de investigación que tiene como objetivo usar la inteligencia
+            artificial para resolver problemas de la industria.
+          </p>
+        </Section>
+      </Container>
       <Section className="portfolio" id="portfolio">
         <h1>Proyectos increibles</h1>
         <hr/>
         <Proyects proyects={projects_data}/>
       </Section>
+      <Section>
+        <Row>
+          <Col md="auto">
+            <Image src={join} style={{height:"350px"}} fluid />
+          </Col>
+          <Col>
+            <h1>Unete al equipo!</h1>
+            <p>
+              Si eres estudiante de Licenciatura o Postgrado en el IPN, o estás interesdo en 
+              complementar tu educación con un postgrado en el Centro de Investigación en Computación,
+              y quieres desarrollar proyectos de IA aplicados a problemas reales o industriales, 
+              te estamos buscando.
+            </p>
+            <Button variant="secondary">Contáctanos</Button>
+          </Col>
+        </Row>
+      </Section>
+      <Container fluid className="team">
+        <Section className="white"> 
+          <h1>Inteligencia colectiva</h1>
+          <hr/>
+          <h2>
+            Alumnos e Investigadores colaborando para resolver problemas multidisciplinarios.
+          </h2>
+        </Section>
+      </Container>
+
     </div>
   );
 };

@@ -95,6 +95,13 @@ hr {
   align-items: stretch;
   display: flex;
 }
+.team {
+  background-image: url('./assets/img/bg/todos_2018_bg.jpg');
+  background-position: top center;
+  min-height: 300px;
+  align-items: stretch;
+  display: flex;
+}
 
 .section .icon {
 	font-size: 50px;
