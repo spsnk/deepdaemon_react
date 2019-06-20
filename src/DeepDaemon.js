@@ -139,11 +139,25 @@ function DeepDaemon() {
           Av. Juan de Dios Bátiz, Esq. Miguel Othón de Mendizábal,<br/> 
           Col. Nueva Industrial Vallejo, Delegación Gustavo A. Madero. CDMX
         </p>
-        <p><span className="icon icon-phone"/>57296000</p>
-        <p><span className="icon icon-envelop"/>contacto@deepdaemon.org </p>
-        <p><a className="icon icon-twitter" href="#"></a> | <a className="icon icon-facebook" href="#"></a></p>
+        <p>
+          <span className="icon icon-phone"/>
+          57296000
+        </p>
+        <p> 
+          <span className="icon icon-envelop"/> 
+          <a href="mailto:contacto@deepdaemon.org">contacto@deepdaemon.org </a>
+        </p>
+        <p>
+          <a href="https://twitter.com">
+            <span className="icon icon-twitter"/> 
+            </a> 
+          | 
+          <a href="https://www.facebook.com">
+            <span className="icon icon-facebook"/> 
+          </a>
+        </p>
         <hr/>
-      <footer>DeepDaemon &copy; 2019</footer>
+      <footer>&copy; DeepDaemon 2019</footer>
       </Container>
     </div>
   );

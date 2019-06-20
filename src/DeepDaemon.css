@@ -113,8 +113,8 @@ hr {
 .contact {
   background-image: url('./assets/img/bg/contact_bg.jpg');
   background-position: center center;
-  height: 30rem;
   padding: 5rem 0;
+  font-size: 1.5rem;
 }
 .contact .icon {
 	font-size: 1.2rem;
