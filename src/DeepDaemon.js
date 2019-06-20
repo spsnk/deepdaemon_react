@@ -8,7 +8,7 @@ import Section from './components/section';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import projects_data from './data/projects.json';
-import Proyects from './components/proyect_card'
+import Proyects from './components/proyect_card';
 
 function DeepDaemon() {
   return (
