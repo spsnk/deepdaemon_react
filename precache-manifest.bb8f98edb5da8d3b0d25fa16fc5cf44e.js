@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "10a266b300ebbb09776828ddd050e68a",
+    "revision": "d3b948ce7d77aed35af4d80757a38ac3",
     "url": "/deepdaemon_react/index.html"
   },
   {
-    "revision": "f94f443d07dbc62699b6",
+    "revision": "1af752e6b2543b618afb",
     "url": "/deepdaemon_react/static/css/2.22a7d4ef.chunk.css"
   },
   {
-    "revision": "dba15a3da6ccb01734d6",
-    "url": "/deepdaemon_react/static/css/main.a802d16b.chunk.css"
+    "revision": "8b41ebe707f425622b11",
+    "url": "/deepdaemon_react/static/css/main.5cda4168.chunk.css"
   },
   {
-    "revision": "f94f443d07dbc62699b6",
-    "url": "/deepdaemon_react/static/js/2.75704219.chunk.js"
+    "revision": "1af752e6b2543b618afb",
+    "url": "/deepdaemon_react/static/js/2.5f692dec.chunk.js"
   },
   {
-    "revision": "dba15a3da6ccb01734d6",
-    "url": "/deepdaemon_react/static/js/main.02ea16ef.chunk.js"
+    "revision": "8b41ebe707f425622b11",
+    "url": "/deepdaemon_react/static/js/main.af25dd27.chunk.js"
   },
   {
     "revision": "f98d519371d5cbee753b",
@@ -54,5 +54,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4e62c623ecf21c74719823881cf3a8e0",
     "url": "/deepdaemon_react/static/media/logo.4e62c623.png"
+  },
+  {
+    "revision": "f8fc7de735d1fc2c134ba07cccba5356",
+    "url": "/deepdaemon_react/static/media/project_front.f8fc7de7.jpg"
+  },
+  {
+    "revision": "cb9b2d3ea16b3e5f6c57205301cf540e",
+    "url": "/deepdaemon_react/static/media/project_modal.cb9b2d3e.jpg"
   }
 ]);
