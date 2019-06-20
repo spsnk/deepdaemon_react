@@ -1,0 +1,14 @@
+.team.card {
+    border: none;
+}
+.team.card img {
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+
+.team.card a{
+    font-size: 1.25rem;
+    display: inline-block;
+    margin: 2px;
+}
