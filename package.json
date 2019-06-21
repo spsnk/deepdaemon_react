@@ -2,7 +2,7 @@
   "name": "deepdaemon",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://spsnk.github.io/deepdaemon_react",
+  "homepage": "http://dev.deepdaemon.org/",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "react": "^16.8.6",
