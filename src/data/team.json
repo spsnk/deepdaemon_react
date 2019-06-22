@@ -7,7 +7,8 @@
         "linkedin":"http://linkedin.com/in/jonathan-adri%C3%A1n-mendieta-ant%C3%BAnez-09999a116",
         "email":"adrian.mendieta@deepdaemon.org",
         "flavor":"Ingeniero Mecatrónico de la Universidad La Salle y actual estudiante de maestría en el Centro de Investigación en Computación del Instituto Politécnico Nacional.",
-        "photo":"mendietaaj.jpg"
+        "photo":"mendietaaj.jpg",
+        "status":"G"
     },
     "vasquezra":
     {
@@ -17,7 +18,8 @@
         "linkedin":"#none",
         "email":"none",
         "flavor":"Soy estudiante de la carrera Ing. Sistemas Computacionales, mis objetivos son aprender nuevas cosas sobre mi carrera para crear proyectos innovadores.",
-        "photo":"vasquezra.jpg"
+        "photo":"vasquezra.jpg",
+        "status":"V"
     },
     "torreslj":
     {
@@ -27,7 +29,8 @@
         "linkedin":"https://www.linkedin.com/in/jos%C3%A9-alberto-torres-00a446140/",
         "email":"alberto.torres@deepdaemon.org",
         "flavor":"Estudiante de Ingeniería en Sistemas Computacionales, interesado en desarrollar aplicaciones de Inteligencia Artificial.",
-        "photo":"torreslj.jpg"
+        "photo":"torreslj.jpg",
+        "status":"O"
     },
     "rochara":
     {
@@ -37,7 +40,8 @@
         "linkedin":"https://www.linkedin.com/in/arturo-pablo-rocha-ramirez-b32741b7",
         "email":"arturo.rocha@deepdaemon.org",
         "flavor":"Estudiante de maestría en ciencias en ingeniería de computo, interés en programación de backend, procesamiento de lenguaje natural y aprendizaje automático.",
-        "photo":"rochara.jpg"
+        "photo":"rochara.jpg",
+        "status":"V"
     },
     "hernandezra":
     {
@@ -47,7 +51,8 @@
         "linkedin":"url",
         "email":"augusto.hernandez@deepdaemon.org",
         "flavor":"Estudiante que disfruta de convivir con sus amigos, desarrollar aplicaciones web, interesado en temas de deep learning, criptografía etc. Ama tomar fotos, nadar y los tacos de pastor.",
-        "photo":"hernandezra.jpg"
+        "photo":"hernandezra.jpg",
+        "status":"V"
     },
     "quirogame":
     {
@@ -57,7 +62,8 @@
         "linkedin":"https://www.linkedin.com/in/edgar-abel-quiroga-maldonado-26a354162",
         "email":"abel.quiroga@deepdaemon.org",
         "flavor":"Entusiasta de la tecnología altamente preparado para el desarrollo de software, capaz, confiable, puntual y amable son cualidades que lo representan.",
-        "photo":"quirogame.jpg"
+        "photo":"quirogame.jpg",
+        "status":"V"
     },
     "hernandezme":
     {
@@ -67,7 +73,8 @@
         "linkedin":"url",
         "email":"none",
         "flavor":"",
-        "photo":"hernandezme.jpg"
+        "photo":"hernandezme.jpg",
+        "status":"V"
     },
     "antoniofj":
     {
@@ -77,7 +84,8 @@
         "linkedin":"url",
         "email":"none",
         "flavor":"",
-        "photo":"antoniofj.jpg"
+        "photo":"antoniofj.jpg",
+        "status":"V"
     },
     "vargasmi":
     {
@@ -87,7 +95,8 @@
         "linkedin":"https://www.linkedin.com/in/israel-a-vargas-monroy-18155a134/",
         "email":"israel.vargas@deepdaemon.org",
         "flavor":"Me considero como un ingeniero capaz, motivado y orientado a poder desarrollar soluciones a problemas a través de mis capacidades preparado para afrontar retos.",
-        "photo":"vargasmi.jpg"
+        "photo":"vargasmi.jpg",
+        "status":"V"
     },
     "morenojc":
     {
@@ -97,7 +106,8 @@
         "linkedin":"https://www.linkedin.com/in/juan-carlos-moreno-04aa8485/",
         "email":"juanc.moreno@deepdaemon.org",
         "flavor":"",
-        "photo":"morenojc.jpg"
+        "photo":"morenojc.jpg",
+        "status":"V"
     },
     "balderassj":
     {
@@ -107,7 +117,8 @@
         "linkedin":"https://www.linkedin.com/in/juanbalderas",
         "email":"juan.balderas@deepdaemon.org",
         "flavor":"Ingeniero en sistemas computacionales interesado en analizar, diseñar e implementar soluciones a problemas sociales mediante procesos científicos y tecnológicos.",
-        "photo":"balderassj.jpg"
+        "photo":"balderassj.jpg",
+        "status":"V"
     },
     "morenosm":
     {
@@ -117,7 +128,8 @@
         "linkedin":"https://www.linkedin.com/in/miguelangel-moreno-315037b1/",
         "email":"miguel.moreno@deepdaemon.org",
         "flavor":"Me considero como un ingeniero capaz, motivado y orientado a poder desarrollar soluciones a problemas a través de mis capacidades preparado para afrontar retos.",
-        "photo":"morenosm.jpg"
+        "photo":"morenosm.jpg",
+        "status":"V"
     },
     "bustamantepo":
     {
@@ -127,7 +139,8 @@
         "linkedin":"https://www.linkedin.com/in/oliver-bustamante-peralta-a8b9ba95/",
         "email":"oliver.bustamante@deepdaemon.org",
         "flavor":"Estudiante de último semestre de la licenciatura en sistemas computacionales enfocado al área de aprendizaje maquina para procesamiento de lenguaje natural.",
-        "photo":"bustamantepo.jpg"
+        "photo":"bustamantepo.jpg",
+        "status":"V"
     },
     "garciaer":
     {
@@ -137,7 +150,8 @@
         "linkedin":"url",
         "email":"none",
         "flavor":"",
-        "photo":"garciaer.jpg"
+        "photo":"garciaer.jpg",
+        "status":"V"
     },
     "lopezja":
     {
@@ -147,7 +161,8 @@
         "linkedin":"https://www.linkedin.com/in/anayantzin-paola-l%C3%B3pez-ju%C3%A1rez-a5a709140/",
         "email":"anayatzin.lopez@deepdaemon.org",
         "flavor":"Me considero una persona seria y responsable con ganas de trabajar y aprender, tengo la creatividad y la capacitad para resolver problemas forma eficiente.",
-        "photo":"lopezja.jpg"
+        "photo":"lopezja.jpg",
+        "status":"V"
     },
     "burciagaor":
     {
@@ -157,7 +172,8 @@
         "linkedin":"https://www.linkedin.com/in/israel-a-vargas-monroy-18155a134/",
         "email":"israel.vargas@deepdaemon.org",
         "flavor":"",
-        "photo":"burciagaor.jpg"
+        "photo":"burciagaor.jpg",
+        "status":"V"
     },
     "gutierrezhs":
     {
@@ -167,7 +183,8 @@
         "linkedin":"url",
         "email":"sandra.gutierrez@deepdaemon.org",
         "flavor":"Estudiante de doctorado en computación con antecedentes en biónica y bioelectrónica.",
-        "photo":"gutierrezhs.jpg"
+        "photo":"gutierrezhs.jpg",
+        "status":"V"
     },
     "hernandezrv":
     {
@@ -177,7 +194,8 @@
         "linkedin":"http://www.linkedin.com/in/victor-eugenio-hern%C3%A1ndez-ramos-01340061",
         "email":"victor.hernandez@deepdaemon.org",
         "flavor":"Ingeniero en Informática (IPN-UPIICSA), con experiencia en herramientas de BI, SMBD, futuro Científico de Datos e investigador en Deep y Machine learning.",
-        "photo":"hernandezrv.jpg"
+        "photo":"hernandezrv.jpg",
+        "status":"V"
     },
     "pazss":
     {
@@ -187,7 +205,8 @@
         "linkedin":"https://www.linkedin.com/in/salvadorpaz",
         "email":"salvador.paz@deepdaemon.org",
         "flavor":"Estudiante de Ingeniería en Sistemas Computacionales, apasionado por la Inteligencia Artificial y la Astronomía.",
-        "photo":"pazss.jpg"
+        "photo":"pazss.jpg",
+        "status":"V"
     },
     "pinedaaj":
     {
@@ -197,7 +216,8 @@
         "linkedin":"url",
         "email":"jennifer.pineda@deepdaemon.org",
         "flavor":"",
-        "photo":"pinedaaj.jpg"
+        "photo":"pinedaaj.jpg",
+        "status":"V"
     },
     "garciagd":
     {
@@ -207,7 +227,8 @@
         "linkedin":"url",
         "email":"damian.garcia@deepdaemon.org",
         "flavor":"",
-        "photo":"garciagd.jpg"
+        "photo":"garciagd.jpg",
+        "status":"V"
     },
     "zuser":
     {
@@ -217,6 +238,7 @@
         "linkedin":"https://www.linkedin.com/",
         "email":"contacto@deepdaemon.org",
         "flavor":"Un estudiante entusiasmado por la investigación.",
-        "photo":"user.png"
+        "photo":"user.png",
+        "status":"G"
     }
 }
