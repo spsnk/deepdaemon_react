@@ -140,10 +140,6 @@ function DeepDaemon() {
           Av. Juan de Dios Bátiz, Esq. Miguel Othón de Mendizábal,<br/> 
           Col. Nueva Industrial Vallejo, Delegación Gustavo A. Madero. CDMX
         </p>
-        <p>
-          <span className="icon icon-phone"/>
-          57296000
-        </p>
         <p> 
           <span className="icon icon-envelop"/> 
           <a href="mailto:contacto@deepdaemon.org">contacto@deepdaemon.org </a>
