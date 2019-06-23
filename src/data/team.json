@@ -1,4 +1,26 @@
 {
+    "morenoam":
+    {
+        "name":"Marco Antonio Moreno Armendáriz",
+        "from":"Investigador | CIC IPN",
+        "projects":[],
+        "linkedin":"https://www.linkedin.com/in/mam-armendariz/",
+        "email":"amam.armendariz@deepdaemon.org",
+        "flavor":"Soy investigador del IPN con 20 años de experiencia y miembro del Sistema Nacional de Investigadores.",
+        "photo":"morenoam.jpg",
+        "status":"L"
+    },
+    "duchanoymc":
+    {
+        "name":"Carlos Alberto Duchanoy Martínez",
+        "from":"Investigador | CIC IPN",
+        "projects":[],
+        "linkedin":"https://www.linkedin.com/in/carlos-alberto-duchanoy-mart%C3%ADnez-0a6a0457/",
+        "email":"carlos.duchanoy@deepdaemon.org",
+        "flavor":"Investigador CONACYT con experiencia en el desarrollo y dirección de proyectos en la industria y academia, enfocado al desarrollo de nuevas tecnologías en IA.",
+        "photo":"duchanoymc.jpg",
+        "status":"L"
+    },
     "mendietaaj":
     {
         "name":"Jonathan Adrián Mendieta Antúnez",

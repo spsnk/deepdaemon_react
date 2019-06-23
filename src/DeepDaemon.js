@@ -19,7 +19,6 @@ import Projects from './components/project_card';
 import Team from './components/team_card';
 
 import projects_data from './data/projects.json';
-import leader_data from './data/leaders.json';
 import team_data from './data/team.json';
 
 function DeepDaemon() {
@@ -122,7 +121,7 @@ function DeepDaemon() {
         <h1>Los líderes</h1>
         <hr/>
         <CardDeck>
-          <Team team={leader_data}/>
+          <Team team={team_data} status="L"/>
         </CardDeck>
       </Container>
       <Container fluid className="section" id="team">
