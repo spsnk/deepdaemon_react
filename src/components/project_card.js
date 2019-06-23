@@ -1,10 +1,11 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import CardDeck from 'react-bootstrap/CardDeck';
 import Button from 'react-bootstrap/Button';
 import './project_card.css';
 
-const Project_card = ({projects}) => (  
-    <>
+const Project_card = ({ projects }) => (
+    <CardDeck>
         {
             Object.keys(projects).map(key => (
                 <Card key={key} className="project">
@@ -16,9 +17,9 @@ const Project_card = ({projects}) => (
                         <Button variant="primary">Ver más...</Button>
                     </Card.Footer>
                 </Card>
-                )
+            )
             )
         }
-    </>
+    </CardDeck>
 );
 export default Project_card;

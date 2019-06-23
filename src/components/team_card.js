@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import CardDeck from 'react-bootstrap/CardDeck';
 import Image from 'react-bootstrap/Image'
 import './team_card.css';
 
@@ -9,7 +10,7 @@ const Team_card = ({team,sort=false,status="current"}) => {
         sorted.sort();
     }
     return (
-        <>
+        <CardDeck>
             {
                 sorted.map(key => {
                     if (team[key].status===status)
@@ -33,7 +34,7 @@ const Team_card = ({team,sort=false,status="current"}) => {
                         return (null);
                 })
             }
-        </>
+        </CardDeck>
     )
 };
 
