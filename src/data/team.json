@@ -8,7 +8,7 @@
         "email":"amam.armendariz@deepdaemon.org",
         "flavor":"Soy investigador del IPN con 20 años de experiencia y miembro del Sistema Nacional de Investigadores.",
         "photo":"morenoam.jpg",
-        "status":"L"
+        "status":"leader"
     },
     "duchanoymc":
     {
@@ -19,7 +19,7 @@
         "email":"carlos.duchanoy@deepdaemon.org",
         "flavor":"Investigador CONACYT con experiencia en el desarrollo y dirección de proyectos en la industria y academia, enfocado al desarrollo de nuevas tecnologías en IA.",
         "photo":"duchanoymc.jpg",
-        "status":"L"
+        "status":"leader"
     },
     "mendietaaj":
     {
@@ -30,7 +30,7 @@
         "email":"adrian.mendieta@deepdaemon.org",
         "flavor":"Ingeniero Mecatrónico de la Universidad La Salle y actual estudiante de maestría en el Centro de Investigación en Computación del Instituto Politécnico Nacional.",
         "photo":"mendietaaj.jpg",
-        "status":"G"
+        "status":"graduate"
     },
     "vasquezra":
     {
@@ -41,7 +41,7 @@
         "email":"none",
         "flavor":"Soy estudiante de la carrera Ing. Sistemas Computacionales, mis objetivos son aprender nuevas cosas sobre mi carrera para crear proyectos innovadores.",
         "photo":"vasquezra.jpg",
-        "status":"V"
+        "status":"current"
     },
     "torreslj":
     {
@@ -52,7 +52,7 @@
         "email":"alberto.torres@deepdaemon.org",
         "flavor":"Estudiante de Ingeniería en Sistemas Computacionales, interesado en desarrollar aplicaciones de Inteligencia Artificial.",
         "photo":"torreslj.jpg",
-        "status":"O"
+        "status":"out"
     },
     "rochara":
     {
@@ -63,7 +63,7 @@
         "email":"arturo.rocha@deepdaemon.org",
         "flavor":"Estudiante de maestría en ciencias en ingeniería de computo, interés en programación de backend, procesamiento de lenguaje natural y aprendizaje automático.",
         "photo":"rochara.jpg",
-        "status":"V"
+        "status":"current"
     },
     "hernandezra":
     {
@@ -74,7 +74,7 @@
         "email":"augusto.hernandez@deepdaemon.org",
         "flavor":"Estudiante que disfruta de convivir con sus amigos, desarrollar aplicaciones web, interesado en temas de deep learning, criptografía etc. Ama tomar fotos, nadar y los tacos de pastor.",
         "photo":"hernandezra.jpg",
-        "status":"V"
+        "status":"current"
     },
     "quirogame":
     {
@@ -85,7 +85,7 @@
         "email":"abel.quiroga@deepdaemon.org",
         "flavor":"Entusiasta de la tecnología altamente preparado para el desarrollo de software, capaz, confiable, puntual y amable son cualidades que lo representan.",
         "photo":"quirogame.jpg",
-        "status":"V"
+        "status":"current"
     },
     "hernandezme":
     {
@@ -96,7 +96,7 @@
         "email":"none",
         "flavor":"",
         "photo":"hernandezme.jpg",
-        "status":"V"
+        "status":"current"
     },
     "antoniofj":
     {
@@ -107,7 +107,7 @@
         "email":"none",
         "flavor":"",
         "photo":"antoniofj.jpg",
-        "status":"V"
+        "status":"current"
     },
     "vargasmi":
     {
@@ -118,7 +118,7 @@
         "email":"israel.vargas@deepdaemon.org",
         "flavor":"Me considero como un ingeniero capaz, motivado y orientado a poder desarrollar soluciones a problemas a través de mis capacidades preparado para afrontar retos.",
         "photo":"vargasmi.jpg",
-        "status":"V"
+        "status":"current"
     },
     "morenojc":
     {
@@ -129,7 +129,7 @@
         "email":"juanc.moreno@deepdaemon.org",
         "flavor":"",
         "photo":"morenojc.jpg",
-        "status":"V"
+        "status":"current"
     },
     "balderassj":
     {
@@ -140,7 +140,7 @@
         "email":"juan.balderas@deepdaemon.org",
         "flavor":"Ingeniero en sistemas computacionales interesado en analizar, diseñar e implementar soluciones a problemas sociales mediante procesos científicos y tecnológicos.",
         "photo":"balderassj.jpg",
-        "status":"V"
+        "status":"current"
     },
     "morenosm":
     {
@@ -151,7 +151,7 @@
         "email":"miguel.moreno@deepdaemon.org",
         "flavor":"Me considero como un ingeniero capaz, motivado y orientado a poder desarrollar soluciones a problemas a través de mis capacidades preparado para afrontar retos.",
         "photo":"morenosm.jpg",
-        "status":"V"
+        "status":"current"
     },
     "bustamantepo":
     {
@@ -162,7 +162,7 @@
         "email":"oliver.bustamante@deepdaemon.org",
         "flavor":"Estudiante de último semestre de la licenciatura en sistemas computacionales enfocado al área de aprendizaje maquina para procesamiento de lenguaje natural.",
         "photo":"bustamantepo.jpg",
-        "status":"V"
+        "status":"current"
     },
     "garciaer":
     {
@@ -173,7 +173,7 @@
         "email":"none",
         "flavor":"",
         "photo":"garciaer.jpg",
-        "status":"V"
+        "status":"current"
     },
     "lopezja":
     {
@@ -184,7 +184,7 @@
         "email":"anayatzin.lopez@deepdaemon.org",
         "flavor":"Me considero una persona seria y responsable con ganas de trabajar y aprender, tengo la creatividad y la capacitad para resolver problemas forma eficiente.",
         "photo":"lopezja.jpg",
-        "status":"V"
+        "status":"current"
     },
     "burciagaor":
     {
@@ -195,7 +195,7 @@
         "email":"israel.vargas@deepdaemon.org",
         "flavor":"",
         "photo":"burciagaor.jpg",
-        "status":"V"
+        "status":"current"
     },
     "gutierrezhs":
     {
@@ -206,7 +206,7 @@
         "email":"sandra.gutierrez@deepdaemon.org",
         "flavor":"Estudiante de doctorado en computación con antecedentes en biónica y bioelectrónica.",
         "photo":"gutierrezhs.jpg",
-        "status":"V"
+        "status":"current"
     },
     "hernandezrv":
     {
@@ -217,7 +217,7 @@
         "email":"victor.hernandez@deepdaemon.org",
         "flavor":"Ingeniero en Informática (IPN-UPIICSA), con experiencia en herramientas de BI, SMBD, futuro Científico de Datos e investigador en Deep y Machine learning.",
         "photo":"hernandezrv.jpg",
-        "status":"V"
+        "status":"current"
     },
     "pazss":
     {
@@ -228,7 +228,7 @@
         "email":"salvador.paz@deepdaemon.org",
         "flavor":"Estudiante de Ingeniería en Sistemas Computacionales, apasionado por la Inteligencia Artificial y la Astronomía.",
         "photo":"pazss.jpg",
-        "status":"V"
+        "status":"current"
     },
     "pinedaaj":
     {
@@ -239,7 +239,7 @@
         "email":"jennifer.pineda@deepdaemon.org",
         "flavor":"",
         "photo":"pinedaaj.jpg",
-        "status":"V"
+        "status":"current"
     },
     "garciagd":
     {
@@ -250,7 +250,7 @@
         "email":"damian.garcia@deepdaemon.org",
         "flavor":"",
         "photo":"garciagd.jpg",
-        "status":"V"
+        "status":"out"
     },
     "zuser":
     {
@@ -261,6 +261,6 @@
         "email":"contacto@deepdaemon.org",
         "flavor":"Un estudiante entusiasmado por la investigación.",
         "photo":"user.png",
-        "status":"G"
+        "status":"out"
     }
 }
