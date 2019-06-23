@@ -4,9 +4,8 @@
 }
 
 .project.card {
-    min-width: 350px;
-    width: 350px;
-    margin: 15px;
+    min-width: 250px;
+    /*width: 350px;*/
 }
 
 .project.card:hover  {

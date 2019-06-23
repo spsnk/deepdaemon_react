@@ -1,0 +1,11 @@
+#team .nav-link
+{
+    background-color:transparent;
+    color: inherit;
+}
+
+#team .nav-link.active
+{
+    background-color:rgba(0, 0, 0, 0.1);
+    color: inherit;
+}

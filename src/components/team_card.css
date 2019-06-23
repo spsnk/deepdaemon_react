@@ -3,7 +3,7 @@
     height: 30rem;
 }
 #team .card {
-    /*max-width: 20rem;*/
+    max-width: 35rem;
     min-width: 25rem;
 }
 .team.card img {
