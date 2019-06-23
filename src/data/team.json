@@ -1,266 +1,242 @@
 {
-    "morenoam":
-    {
-        "name":"Marco Antonio Moreno Armendáriz",
-        "from":"Investigador | CIC IPN",
-        "projects":[],
-        "linkedin":"https://www.linkedin.com/in/mam-armendariz/",
-        "email":"amam.armendariz@deepdaemon.org",
-        "flavor":"Soy investigador del IPN con 20 años de experiencia y miembro del Sistema Nacional de Investigadores.",
-        "photo":"morenoam.jpg",
-        "status":"leader"
+    "morenoam": {
+        "name": "Marco Antonio Moreno Armendáriz",
+        "from": "Investigador | CIC IPN",
+        "projects": [],
+        "linkedin": "https://www.linkedin.com/in/mam-armendariz/",
+        "email": "amam.armendariz@deepdaemon.org",
+        "flavor": "Soy investigador del IPN con 20 años de experiencia y miembro del Sistema Nacional de Investigadores.",
+        "photo": "morenoam.jpg",
+        "status": "leader"
     },
-    "duchanoymc":
-    {
-        "name":"Carlos Alberto Duchanoy Martínez",
-        "from":"Investigador | CIC IPN",
-        "projects":[],
-        "linkedin":"https://www.linkedin.com/in/carlos-alberto-duchanoy-mart%C3%ADnez-0a6a0457/",
-        "email":"carlos.duchanoy@deepdaemon.org",
-        "flavor":"Investigador CONACYT con experiencia en el desarrollo y dirección de proyectos en la industria y academia, enfocado al desarrollo de nuevas tecnologías en IA.",
-        "photo":"duchanoymc.jpg",
-        "status":"leader"
+    "duchanoymc": {
+        "name": "Carlos Alberto Duchanoy Martínez",
+        "from": "Investigador | CIC IPN",
+        "projects": [],
+        "linkedin": "https://www.linkedin.com/in/carlos-alberto-duchanoy-mart%C3%ADnez-0a6a0457/",
+        "email": "carlos.duchanoy@deepdaemon.org",
+        "flavor": "Investigador CONACYT con experiencia en el desarrollo y dirección de proyectos en la industria y academia, enfocado al desarrollo de nuevas tecnologías en IA.",
+        "photo": "duchanoymc.jpg",
+        "status": "leader"
     },
-    "mendietaaj":
-    {
-        "name":"Jonathan Adrián Mendieta Antúnez",
-        "from":"Estudieante | CIC IPN",
-        "projects":[],
-        "linkedin":"http://linkedin.com/in/jonathan-adri%C3%A1n-mendieta-ant%C3%BAnez-09999a116",
-        "email":"adrian.mendieta@deepdaemon.org",
-        "flavor":"Ingeniero Mecatrónico de la Universidad La Salle y actual estudiante de maestría en el Centro de Investigación en Computación del Instituto Politécnico Nacional.",
-        "photo":"mendietaaj.jpg",
-        "status":"graduate"
+    "mendietaaj": {
+        "name": "Jonathan Adrián Mendieta Antúnez",
+        "from": "Estudieante | CIC IPN",
+        "projects": [],
+        "linkedin": "http://linkedin.com/in/jonathan-adri%C3%A1n-mendieta-ant%C3%BAnez-09999a116",
+        "email": "adrian.mendieta@deepdaemon.org",
+        "flavor": "Ingeniero Mecatrónico de la Universidad La Salle y actual estudiante de maestría en el Centro de Investigación en Computación del Instituto Politécnico Nacional.",
+        "photo": "mendietaaj.jpg",
+        "status": "graduate"
     },
-    "vasquezra":
-    {
-        "name":"Adriana Vásquez Ramírez",
-        "from":"Estudiante | ESCOM IPN",
-        "projects":[],
-        "linkedin":"#none",
-        "email":"none",
-        "flavor":"Soy estudiante de la carrera Ing. Sistemas Computacionales, mis objetivos son aprender nuevas cosas sobre mi carrera para crear proyectos innovadores.",
-        "photo":"vasquezra.jpg",
-        "status":"current"
+    "vasquezra": {
+        "name": "Adriana Vásquez Ramírez",
+        "from": "Estudiante | ESCOM IPN",
+        "projects": [],
+        "linkedin": "#none",
+        "email": "none",
+        "flavor": "Soy estudiante de la carrera Ing. Sistemas Computacionales, mis objetivos son aprender nuevas cosas sobre mi carrera para crear proyectos innovadores.",
+        "photo": "vasquezra.jpg",
+        "status": "current"
     },
-    "torreslj":
-    {
-        "name":"José Alberto Torres León",
-        "from":"Estudiante | ESCOM IPN",
-        "projects":[],
-        "linkedin":"https://www.linkedin.com/in/jos%C3%A9-alberto-torres-00a446140/",
-        "email":"alberto.torres@deepdaemon.org",
-        "flavor":"Estudiante de Ingeniería en Sistemas Computacionales, interesado en desarrollar aplicaciones de Inteligencia Artificial.",
-        "photo":"torreslj.jpg",
-        "status":"out"
+    "torreslj": {
+        "name": "José Alberto Torres León",
+        "from": "Estudiante | ESCOM IPN",
+        "projects": [],
+        "linkedin": "https://www.linkedin.com/in/jos%C3%A9-alberto-torres-00a446140/",
+        "email": "alberto.torres@deepdaemon.org",
+        "flavor": "Estudiante de Ingeniería en Sistemas Computacionales, interesado en desarrollar aplicaciones de Inteligencia Artificial.",
+        "photo": "torreslj.jpg",
+        "status": "out"
     },
-    "rochara":
-    {
-        "name":"Arturo Pablo Rocha Ramirez",
-        "from":"Estudiante | CIC IPN",
-        "projects":[],
-        "linkedin":"https://www.linkedin.com/in/arturo-pablo-rocha-ramirez-b32741b7",
-        "email":"arturo.rocha@deepdaemon.org",
-        "flavor":"Estudiante de maestría en ciencias en ingeniería de computo, interés en programación de backend, procesamiento de lenguaje natural y aprendizaje automático.",
-        "photo":"rochara.jpg",
-        "status":"current"
+    "rochara": {
+        "name": "Arturo Pablo Rocha Ramirez",
+        "from": "Estudiante | CIC IPN",
+        "projects": [],
+        "linkedin": "https://www.linkedin.com/in/arturo-pablo-rocha-ramirez-b32741b7",
+        "email": "arturo.rocha@deepdaemon.org",
+        "flavor": "Estudiante de maestría en ciencias en ingeniería de computo, interés en programación de backend, procesamiento de lenguaje natural y aprendizaje automático.",
+        "photo": "rochara.jpg",
+        "status": "current"
     },
-    "hernandezra":
-    {
-        "name":"Augusto I. Hernández Ruiz",
-        "from":"Estudiante | ESCOM IPN",
-        "projects":[],
-        "linkedin":"url",
-        "email":"augusto.hernandez@deepdaemon.org",
-        "flavor":"Estudiante que disfruta de convivir con sus amigos, desarrollar aplicaciones web, interesado en temas de deep learning, criptografía etc. Ama tomar fotos, nadar y los tacos de pastor.",
-        "photo":"hernandezra.jpg",
-        "status":"current"
+    "hernandezra": {
+        "name": "Augusto I. Hernández Ruiz",
+        "from": "Estudiante | ESCOM IPN",
+        "projects": [],
+        "linkedin": "url",
+        "email": "augusto.hernandez@deepdaemon.org",
+        "flavor": "Estudiante que disfruta de convivir con sus amigos, desarrollar aplicaciones web, interesado en temas de deep learning, criptografía etc. Ama tomar fotos, nadar y los tacos de pastor.",
+        "photo": "hernandezra.jpg",
+        "status": "current"
     },
-    "quirogame":
-    {
-        "name":"Edgar Abel Quiroga Maldonado",
-        "from":"Estudiante | CIC IPN",
-        "projects":[],
-        "linkedin":"https://www.linkedin.com/in/edgar-abel-quiroga-maldonado-26a354162",
-        "email":"abel.quiroga@deepdaemon.org",
-        "flavor":"Entusiasta de la tecnología altamente preparado para el desarrollo de software, capaz, confiable, puntual y amable son cualidades que lo representan.",
-        "photo":"quirogame.jpg",
-        "status":"current"
+    "quirogame": {
+        "name": "Edgar Abel Quiroga Maldonado",
+        "from": "Estudiante | CIC IPN",
+        "projects": [],
+        "linkedin": "https://www.linkedin.com/in/edgar-abel-quiroga-maldonado-26a354162",
+        "email": "abel.quiroga@deepdaemon.org",
+        "flavor": "Entusiasta de la tecnología altamente preparado para el desarrollo de software, capaz, confiable, puntual y amable son cualidades que lo representan.",
+        "photo": "quirogame.jpg",
+        "status": "current"
     },
-    "hernandezme":
-    {
-        "name":"Eduardo Hernandez Martinez",
-        "from":"Estudiante | ESCOM IPN",
-        "projects":[],
-        "linkedin":"url",
-        "email":"none",
-        "flavor":"",
-        "photo":"hernandezme.jpg",
-        "status":"current"
+    "hernandezme": {
+        "name": "Eduardo Hernandez Martinez",
+        "from": "Estudiante | ESCOM IPN",
+        "projects": [],
+        "linkedin": "url",
+        "email": "none",
+        "flavor": "",
+        "photo": "hernandezme.jpg",
+        "status": "current"
     },
-    "antoniofj":
-    {
-        "name":"José Antonio Faustinos",
-        "from":"Estudiante | ESCOM IPN",
-        "projects":[],
-        "linkedin":"url",
-        "email":"none",
-        "flavor":"",
-        "photo":"antoniofj.jpg",
-        "status":"current"
+    "antoniofj": {
+        "name": "José Antonio Faustinos",
+        "from": "Estudiante | ESCOM IPN",
+        "projects": [],
+        "linkedin": "url",
+        "email": "none",
+        "flavor": "",
+        "photo": "antoniofj.jpg",
+        "status": "current"
     },
-    "vargasmi":
-    {
-        "name":"Israel Agustin Vargas Monroy",
-        "from":"Estudiante | ESCOM IPN",
-        "projects":[],
-        "linkedin":"https://www.linkedin.com/in/israel-a-vargas-monroy-18155a134/",
-        "email":"israel.vargas@deepdaemon.org",
-        "flavor":"Me considero como un ingeniero capaz, motivado y orientado a poder desarrollar soluciones a problemas a través de mis capacidades preparado para afrontar retos.",
-        "photo":"vargasmi.jpg",
-        "status":"current"
+    "vargasmi": {
+        "name": "Israel Agustin Vargas Monroy",
+        "from": "Estudiante | ESCOM IPN",
+        "projects": [],
+        "linkedin": "https://www.linkedin.com/in/israel-a-vargas-monroy-18155a134/",
+        "email": "israel.vargas@deepdaemon.org",
+        "flavor": "Me considero como un ingeniero capaz, motivado y orientado a poder desarrollar soluciones a problemas a través de mis capacidades preparado para afrontar retos.",
+        "photo": "vargasmi.jpg",
+        "status": "current"
     },
-    "morenojc":
-    {
-        "name":"Juan Carlos Moreno",
-        "from":"Estudiante | CIC IPN",
-        "projects":[],
-        "linkedin":"https://www.linkedin.com/in/juan-carlos-moreno-04aa8485/",
-        "email":"juanc.moreno@deepdaemon.org",
-        "flavor":"",
-        "photo":"morenojc.jpg",
-        "status":"current"
+    "morenojc": {
+        "name": "Juan Carlos Moreno",
+        "from": "Estudiante | CIC IPN",
+        "projects": [],
+        "linkedin": "https://www.linkedin.com/in/juan-carlos-moreno-04aa8485/",
+        "email": "juanc.moreno@deepdaemon.org",
+        "flavor": "",
+        "photo": "morenojc.jpg",
+        "status": "current"
     },
-    "balderassj":
-    {
-        "name":"Juan Manuel Balderas Sánchez",
-        "from":"Estudiante | ESCOM IPN",
-        "projects":[],
-        "linkedin":"https://www.linkedin.com/in/juanbalderas",
-        "email":"juan.balderas@deepdaemon.org",
-        "flavor":"Ingeniero en sistemas computacionales interesado en analizar, diseñar e implementar soluciones a problemas sociales mediante procesos científicos y tecnológicos.",
-        "photo":"balderassj.jpg",
-        "status":"current"
+    "balderassj": {
+        "name": "Juan Manuel Balderas Sánchez",
+        "from": "Estudiante | ESCOM IPN",
+        "projects": [],
+        "linkedin": "https://www.linkedin.com/in/juanbalderas",
+        "email": "juan.balderas@deepdaemon.org",
+        "flavor": "Ingeniero en sistemas computacionales interesado en analizar, diseñar e implementar soluciones a problemas sociales mediante procesos científicos y tecnológicos.",
+        "photo": "balderassj.jpg",
+        "status": "current"
     },
-    "morenosm":
-    {
-        "name":"Miguelangel Moreno Sotelo",
-        "from":"Estudiante | CIC IPN",
-        "projects":[],
-        "linkedin":"https://www.linkedin.com/in/miguelangel-moreno-315037b1/",
-        "email":"miguel.moreno@deepdaemon.org",
-        "flavor":"Me considero como un ingeniero capaz, motivado y orientado a poder desarrollar soluciones a problemas a través de mis capacidades preparado para afrontar retos.",
-        "photo":"morenosm.jpg",
-        "status":"current"
+    "morenosm": {
+        "name": "Miguelangel Moreno Sotelo",
+        "from": "Estudiante | CIC IPN",
+        "projects": [],
+        "linkedin": "https://www.linkedin.com/in/miguelangel-moreno-315037b1/",
+        "email": "miguel.moreno@deepdaemon.org",
+        "flavor": "Me considero como un ingeniero capaz, motivado y orientado a poder desarrollar soluciones a problemas a través de mis capacidades preparado para afrontar retos.",
+        "photo": "morenosm.jpg",
+        "status": "current"
     },
-    "bustamantepo":
-    {
-        "name":"Oliver Bustamante Peralta",
-        "from":"Estudiante | ESCOM IPN",
-        "projects":[],
-        "linkedin":"https://www.linkedin.com/in/oliver-bustamante-peralta-a8b9ba95/",
-        "email":"oliver.bustamante@deepdaemon.org",
-        "flavor":"Estudiante de último semestre de la licenciatura en sistemas computacionales enfocado al área de aprendizaje maquina para procesamiento de lenguaje natural.",
-        "photo":"bustamantepo.jpg",
-        "status":"current"
+    "bustamantepo": {
+        "name": "Oliver Bustamante Peralta",
+        "from": "Estudiante | ESCOM IPN",
+        "projects": [],
+        "linkedin": "https://www.linkedin.com/in/oliver-bustamante-peralta-a8b9ba95/",
+        "email": "oliver.bustamante@deepdaemon.org",
+        "flavor": "Estudiante de último semestre de la licenciatura en sistemas computacionales enfocado al área de aprendizaje maquina para procesamiento de lenguaje natural.",
+        "photo": "bustamantepo.jpg",
+        "status": "current"
     },
-    "garciaer":
-    {
-        "name":"Roberto Francisco García Enríquez",
-        "from":"Estudiante | ESCOM IPN",
-        "projects":[],
-        "linkedin":"url",
-        "email":"none",
-        "flavor":"",
-        "photo":"garciaer.jpg",
-        "status":"current"
+    "garciaer": {
+        "name": "Roberto Francisco García Enríquez",
+        "from": "Estudiante | ESCOM IPN",
+        "projects": [],
+        "linkedin": "url",
+        "email": "none",
+        "flavor": "",
+        "photo": "garciaer.jpg",
+        "status": "current"
     },
-    "lopezja":
-    {
-        "name":"Anayantzin Paola Lopez Juarez",
-        "from":"Estudiante | ESCOM IPN",
-        "projects":[],
-        "linkedin":"https://www.linkedin.com/in/anayantzin-paola-l%C3%B3pez-ju%C3%A1rez-a5a709140/",
-        "email":"anayatzin.lopez@deepdaemon.org",
-        "flavor":"Me considero una persona seria y responsable con ganas de trabajar y aprender, tengo la creatividad y la capacitad para resolver problemas forma eficiente.",
-        "photo":"lopezja.jpg",
-        "status":"current"
+    "lopezja": {
+        "name": "Anayantzin Paola Lopez Juarez",
+        "from": "Estudiante | ESCOM IPN",
+        "projects": [],
+        "linkedin": "https://www.linkedin.com/in/anayantzin-paola-l%C3%B3pez-ju%C3%A1rez-a5a709140/",
+        "email": "anayatzin.lopez@deepdaemon.org",
+        "flavor": "Me considero una persona seria y responsable con ganas de trabajar y aprender, tengo la creatividad y la capacitad para resolver problemas forma eficiente.",
+        "photo": "lopezja.jpg",
+        "status": "current"
     },
-    "burciagaor":
-    {
-        "name":"Rodrigo Andrés Burciaga Ornelas",
-        "from":"Estudiante | ESCOM IPN",
-        "projects":[],
-        "linkedin":"https://www.linkedin.com/in/israel-a-vargas-monroy-18155a134/",
-        "email":"israel.vargas@deepdaemon.org",
-        "flavor":"",
-        "photo":"burciagaor.jpg",
-        "status":"current"
+    "burciagaor": {
+        "name": "Rodrigo Andrés Burciaga Ornelas",
+        "from": "Estudiante | ESCOM IPN",
+        "projects": [],
+        "linkedin": "https://www.linkedin.com/in/israel-a-vargas-monroy-18155a134/",
+        "email": "israel.vargas@deepdaemon.org",
+        "flavor": "",
+        "photo": "burciagaor.jpg",
+        "status": "current"
     },
-    "gutierrezhs":
-    {
-        "name":"Sandra Jazmín Gutiérrez Hinojosa",
-        "from":"Estudiante | CIC IPN",
-        "projects":[],
-        "linkedin":"url",
-        "email":"sandra.gutierrez@deepdaemon.org",
-        "flavor":"Estudiante de doctorado en computación con antecedentes en biónica y bioelectrónica.",
-        "photo":"gutierrezhs.jpg",
-        "status":"current"
+    "gutierrezhs": {
+        "name": "Sandra Jazmín Gutiérrez Hinojosa",
+        "from": "Estudiante | CIC IPN",
+        "projects": [],
+        "linkedin": "url",
+        "email": "sandra.gutierrez@deepdaemon.org",
+        "flavor": "Estudiante de doctorado en computación con antecedentes en biónica y bioelectrónica.",
+        "photo": "gutierrezhs.jpg",
+        "status": "current"
     },
-    "hernandezrv":
-    {
-        "name":"Victor Eugenio Hernández Ramos",
-        "from":"Estudiante | CIC IPN",
-        "projects":[],
-        "linkedin":"http://www.linkedin.com/in/victor-eugenio-hern%C3%A1ndez-ramos-01340061",
-        "email":"victor.hernandez@deepdaemon.org",
-        "flavor":"Ingeniero en Informática (IPN-UPIICSA), con experiencia en herramientas de BI, SMBD, futuro Científico de Datos e investigador en Deep y Machine learning.",
-        "photo":"hernandezrv.jpg",
-        "status":"current"
+    "hernandezrv": {
+        "name": "Victor Eugenio Hernández Ramos",
+        "from": "Estudiante | CIC IPN",
+        "projects": [],
+        "linkedin": "http://www.linkedin.com/in/victor-eugenio-hern%C3%A1ndez-ramos-01340061",
+        "email": "victor.hernandez@deepdaemon.org",
+        "flavor": "Ingeniero en Informática (IPN-UPIICSA), con experiencia en herramientas de BI, SMBD, futuro Científico de Datos e investigador en Deep y Machine learning.",
+        "photo": "hernandezrv.jpg",
+        "status": "current"
     },
-    "pazss":
-    {
-        "name":"Salvador Paz Santos",
-        "from":"Estudiante | ESCOM IPN",
-        "projects":[],
-        "linkedin":"https://www.linkedin.com/in/salvadorpaz",
-        "email":"salvador.paz@deepdaemon.org",
-        "flavor":"Estudiante de Ingeniería en Sistemas Computacionales, apasionado por la Inteligencia Artificial y la Astronomía.",
-        "photo":"pazss.jpg",
-        "status":"current"
+    "pazss": {
+        "name": "Salvador Paz Santos",
+        "from": "Estudiante | ESCOM IPN",
+        "projects": [],
+        "linkedin": "https://www.linkedin.com/in/salvadorpaz",
+        "email": "salvador.paz@deepdaemon.org",
+        "flavor": "Estudiante de Ingeniería en Sistemas Computacionales, apasionado por la Inteligencia Artificial y la Astronomía.",
+        "photo": "pazss.jpg",
+        "status": "current"
     },
-    "pinedaaj":
-    {
-        "name":"Jennifer Pineda Aburto",
-        "from":"Estudiante | ESCOM IPN",
-        "projects":[],
-        "linkedin":"url",
-        "email":"jennifer.pineda@deepdaemon.org",
-        "flavor":"",
-        "photo":"pinedaaj.jpg",
-        "status":"current"
+    "pinedaaj": {
+        "name": "Jennifer Pineda Aburto",
+        "from": "Estudiante | ESCOM IPN",
+        "projects": [],
+        "linkedin": "url",
+        "email": "jennifer.pineda@deepdaemon.org",
+        "flavor": "",
+        "photo": "pinedaaj.jpg",
+        "status": "current"
     },
-    "garciagd":
-    {
-        "name":"Damián Amaury García García",
-        "from":"Estudiante | ESCOM IPN",
-        "projects":[],
-        "linkedin":"url",
-        "email":"damian.garcia@deepdaemon.org",
-        "flavor":"",
-        "photo":"garciagd.jpg",
-        "status":"out"
+    "garciagd": {
+        "name": "Damián Amaury García García",
+        "from": "Estudiante | ESCOM IPN",
+        "projects": [],
+        "linkedin": "url",
+        "email": "damian.garcia@deepdaemon.org",
+        "flavor": "",
+        "photo": "garciagd.jpg",
+        "status": "out"
     },
-    "zuser":
-    {
-        "name":"Estudiante",
-        "from":"Estudiante",
-        "projects":[],
-        "linkedin":"https://www.linkedin.com/",
-        "email":"contacto@deepdaemon.org",
-        "flavor":"Un estudiante entusiasmado por la investigación.",
-        "photo":"user.png",
-        "status":"out"
+    "zuser": {
+        "name": "Estudiante",
+        "from": "Estudiante",
+        "projects": [],
+        "linkedin": "https://www.linkedin.com/",
+        "email": "contacto@deepdaemon.org",
+        "flavor": "Un estudiante entusiasmado por la investigación.",
+        "photo": "user.png",
+        "status": "out"
     }
 }
