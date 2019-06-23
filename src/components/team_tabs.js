@@ -1,6 +1,7 @@
 import React from 'react';
-import { Tab, Row, Col, Nav } from 'react-bootstrap';
+import { Tab, Nav } from 'react-bootstrap';
 import Team from './team_card';
+import './team_tabs.css';
 
 const TeamTabs = ({ teams }) => {
     return (
