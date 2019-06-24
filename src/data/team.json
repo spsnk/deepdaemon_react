@@ -1,7 +1,9 @@
 {
     "morenoam": {
         "name": "Marco Antonio Moreno Armendáriz",
-        "from": "Investigador | CIC IPN",
+        "from": [
+            "Investigador | CIC IPN"
+        ],
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/mam-armendariz/",
         "email": "amam.armendariz@deepdaemon.org",
@@ -11,7 +13,9 @@
     },
     "duchanoymc": {
         "name": "Carlos Alberto Duchanoy Martínez",
-        "from": "Investigador | CIC IPN",
+        "from": [
+            "Investigador | CIC IPN"
+        ],
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/carlos-alberto-duchanoy-mart%C3%ADnez-0a6a0457/",
         "email": "carlos.duchanoy@deepdaemon.org",
@@ -21,7 +25,9 @@
     },
     "mendietaaj": {
         "name": "Jonathan Adrián Mendieta Antúnez",
-        "from": "Estudiante | CIC IPN",
+        "from": [
+            "Estudiante | CIC IPN"
+        ],
         "projects": [],
         "linkedin": "http://linkedin.com/in/jonathan-adri%C3%A1n-mendieta-ant%C3%BAnez-09999a116",
         "email": "adrian.mendieta@deepdaemon.org",
@@ -31,7 +37,9 @@
     },
     "vasquezra": {
         "name": "Adriana Vásquez Ramírez",
-        "from": "Graduado | ESCOM IPN",
+        "from": [
+            "Graduado | ESCOM IPN"
+        ],
         "projects": [],
         "linkedin": "#none",
         "email": "none",
@@ -41,7 +49,10 @@
     },
     "torreslj": {
         "name": "José Alberto Torres León",
-        "from": "Graduado ESCOM IPN <br/> Estudiante | CIC IPN",
+        "from": [
+            "Graduado | ESCOM IPN",
+            "Estudiante | CIC IPN"
+        ],
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/jos%C3%A9-alberto-torres-00a446140/",
         "email": "alberto.torres@deepdaemon.org",
@@ -51,7 +62,9 @@
     },
     "rochara": {
         "name": "Arturo Pablo Rocha Ramirez",
-        "from": "Graduado | CIC IPN",
+        "from": [
+            "Graduado | CIC IPN"
+        ],
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/arturo-pablo-rocha-ramirez-b32741b7",
         "email": "arturo.rocha@deepdaemon.org",
@@ -61,7 +74,9 @@
     },
     "hernandezra": {
         "name": "Augusto I. Hernández Ruiz",
-        "from": "Estudiante | ESCOM IPN",
+        "from": [
+            "Estudiante | ESCOM IPN"
+        ],
         "projects": [],
         "linkedin": "url",
         "email": "augusto.hernandez@deepdaemon.org",
@@ -71,7 +86,9 @@
     },
     "quirogame": {
         "name": "Edgar Abel Quiroga Maldonado",
-        "from": "Graduado | CIC IPN",
+        "from": [
+            "Graduado | CIC IPN"
+        ],
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/edgar-abel-quiroga-maldonado-26a354162",
         "email": "abel.quiroga@deepdaemon.org",
@@ -81,7 +98,10 @@
     },
     "hernandezme": {
         "name": "Eduardo Hernandez Martinez",
-        "from": " Graduado ESCOM IPN <br/> Servicio Social | CIC IPN",
+        "from": [
+            "Graduado | ESCOM IPN",
+            "Servicio Social | CIC IPN"
+        ],
         "projects": [],
         "linkedin": "url",
         "email": "none",
@@ -91,7 +111,10 @@
     },
     "martinezfj": {
         "name": "José Antonio Martinez Faustinos",
-        "from": "Graduado ESCOM IPN <br/> Estudiante | CIC IPN",
+        "from": [
+            "Graduado | ESCOM IPN",
+            "Estudiante | CIC IPN"
+        ],
         "projects": [],
         "linkedin": "url",
         "email": "none",
@@ -101,7 +124,9 @@
     },
     "vargasmi": {
         "name": "Israel Agustin Vargas Monroy",
-        "from": "Posadas | ESCOM IPN",
+        "from": [
+            "Posadas | ESCOM IPN"
+        ],
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/israel-a-vargas-monroy-18155a134/",
         "email": "israel.vargas@deepdaemon.org",
@@ -111,7 +136,10 @@
     },
     "morenojc": {
         "name": "Juan Carlos Moreno Torres",
-        "from": "Ford Company México | CIC IPN",
+        "from": [
+            "Ford Company México",
+            "Graduado | CIC IPN"
+        ],
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/juan-carlos-moreno-04aa8485/",
         "email": "juanc.moreno@deepdaemon.org",
@@ -121,7 +149,9 @@
     },
     "balderassj": {
         "name": "Juan Manuel Balderas Sánchez",
-        "from": "Posadas | ESCOM IPN",
+        "from": [
+            "Posadas | ESCOM IPN"
+        ],
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/juanbalderas",
         "email": "juan.balderas@deepdaemon.org",
@@ -131,7 +161,9 @@
     },
     "morenosm": {
         "name": "Miguelangel Moreno Sotelo",
-        "from": "Estudiante | CIC IPN",
+        "from": [
+            "Estudiante | CIC IPN"
+        ],
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/miguelangel-moreno-315037b1/",
         "email": "miguel.moreno@deepdaemon.org",
@@ -141,7 +173,10 @@
     },
     "bustamantepo": {
         "name": "Oliver Bustamante Peralta",
-        "from": "Graduado ESCOM IPN <br/> Estudiante | CIC IPN",
+        "from": [
+            "Graduado | ESCOM IPN",
+            " Estudiante | CIC IPN"
+        ],
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/oliver-bustamante-peralta-a8b9ba95/",
         "email": "oliver.bustamante@deepdaemon.org",
@@ -151,7 +186,9 @@
     },
     "garciaer": {
         "name": "Roberto Francisco García Enríquez",
-        "from": "Estudiante | ESCOM IPN",
+        "from": [
+            "Estudiante | ESCOM IPN"
+        ],
         "projects": [],
         "linkedin": "url",
         "email": "none",
@@ -161,7 +198,10 @@
     },
     "lopezja": {
         "name": "Anayantzin Paola Lopez Juarez",
-        "from": "Everis | ESCOM IPN",
+        "from": [
+            "Everis",
+            " Graduado | ESCOM IPN"
+        ],
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/anayantzin-paola-l%C3%B3pez-ju%C3%A1rez-a5a709140/",
         "email": "anayatzin.lopez@deepdaemon.org",
@@ -171,7 +211,9 @@
     },
     "burciagaor": {
         "name": "Rodrigo Andrés Burciaga Ornelas",
-        "from": "Servicio Social | CIC IPN",
+        "from": [
+            "Servicio Social | CIC IPN"
+        ],
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/israel-a-vargas-monroy-18155a134/",
         "email": "israel.vargas@deepdaemon.org",
@@ -181,7 +223,9 @@
     },
     "gutierrezhs": {
         "name": "Sandra Jazmín Gutiérrez Hinojosa",
-        "from": "Estudiante | CIC IPN",
+        "from": [
+            "Estudiante | CIC IPN"
+        ],
         "projects": [],
         "linkedin": "url",
         "email": "sandra.gutierrez@deepdaemon.org",
@@ -191,7 +235,9 @@
     },
     "hernandezrv": {
         "name": "Victor Eugenio Hernández Ramos",
-        "from": "Estudiante | CIC IPN",
+        "from": [
+            "Estudiante | CIC IPN"
+        ],
         "projects": [],
         "linkedin": "http://www.linkedin.com/in/victor-eugenio-hern%C3%A1ndez-ramos-01340061",
         "email": "victor.hernandez@deepdaemon.org",
@@ -201,7 +247,9 @@
     },
     "pazss": {
         "name": "Salvador Paz Santos",
-        "from": "Estudiante | ESCOM IPN",
+        "from": [
+            "Estudiante | ESCOM IPN"
+        ],
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/salvadorpaz",
         "email": "salvador.paz@deepdaemon.org",
@@ -211,7 +259,9 @@
     },
     "pinedaaj": {
         "name": "Jennifer Pineda Aburto",
-        "from": "Estudiante | ESCOM IPN",
+        "from": [
+            "Estudiante | ESCOM IPN"
+        ],
         "projects": [],
         "linkedin": "url",
         "email": "jennifer.pineda@deepdaemon.org",
@@ -221,7 +271,9 @@
     },
     "garciagd": {
         "name": "Damián Amaury García García",
-        "from": "Estudiante | ESCOM IPN",
+        "from": [
+            "Estudiante | ESCOM IPN"
+        ],
         "projects": [],
         "linkedin": "url",
         "email": "damian.garcia@deepdaemon.org",
@@ -231,7 +283,9 @@
     },
     "zuser": {
         "name": "Estudiante",
-        "from": "Estudiante",
+        "from": [
+            "Estudiante"
+        ],
         "projects": [],
         "linkedin": "https://www.linkedin.com/",
         "email": "contacto@deepdaemon.org",
