@@ -51,13 +51,13 @@
     },
     "rochara": {
         "name": "Arturo Pablo Rocha Ramirez",
-        "from": "Estudiante | CIC IPN",
+        "from": "Graduado | CIC IPN",
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/arturo-pablo-rocha-ramirez-b32741b7",
         "email": "arturo.rocha@deepdaemon.org",
         "flavor": "Estudiante de maestría en ciencias en ingeniería de computo, interés en programación de backend, procesamiento de lenguaje natural y aprendizaje automático.",
         "photo": "rochara.jpg",
-        "status": "current"
+        "status": "Graduate"
     },
     "hernandezra": {
         "name": "Augusto I. Hernández Ruiz",
@@ -67,7 +67,7 @@
         "email": "augusto.hernandez@deepdaemon.org",
         "flavor": "Estudiante que disfruta de convivir con sus amigos, desarrollar aplicaciones web, interesado en temas de deep learning, criptografía etc. Ama tomar fotos, nadar y los tacos de pastor.",
         "photo": "hernandezra.jpg",
-        "status": "current"
+        "status": "out"
     },
     "quirogame": {
         "name": "Edgar Abel Quiroga Maldonado",
@@ -110,14 +110,14 @@
         "status": "current"
     },
     "morenojc": {
-        "name": "Juan Carlos Moreno",
-        "from": "Estudiante | CIC IPN",
+        "name": "Juan Carlos Moreno Torres",
+        "from": "Ford Company México | CIC IPN",
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/juan-carlos-moreno-04aa8485/",
         "email": "juanc.moreno@deepdaemon.org",
         "flavor": "",
         "photo": "morenojc.jpg",
-        "status": "current"
+        "status": "graduate"
     },
     "balderassj": {
         "name": "Juan Manuel Balderas Sánchez",
@@ -157,7 +157,7 @@
         "email": "none",
         "flavor": "",
         "photo": "garciaer.jpg",
-        "status": "current"
+        "status": "out"
     },
     "lopezja": {
         "name": "Anayantzin Paola Lopez Juarez",
