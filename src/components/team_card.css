@@ -1,10 +1,9 @@
 .team.card {
     border: none;
     height: 30rem;
-}
-#team .card {
     max-width: 35rem;
     min-width: 25rem;
+    background-color:transparent;
 }
 .team.card img {
     width: 150px;
