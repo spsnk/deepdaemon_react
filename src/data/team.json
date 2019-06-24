@@ -27,7 +27,7 @@
         "email": "adrian.mendieta@deepdaemon.org",
         "flavor": "Ingeniero Mecatrónico de la Universidad La Salle y actual estudiante de maestría en el Centro de Investigación en Computación del Instituto Politécnico Nacional.",
         "photo": "mendietaaj.jpg",
-        "status": "graduate"
+        "status": "current"
     },
     "vasquezra": {
         "name": "Adriana Vásquez Ramírez",
@@ -37,7 +37,7 @@
         "email": "none",
         "flavor": "Soy estudiante de la carrera Ing. Sistemas Computacionales, mis objetivos son aprender nuevas cosas sobre mi carrera para crear proyectos innovadores.",
         "photo": "vasquezra.jpg",
-        "status": "current"
+        "status": "graduate"
     },
     "torreslj": {
         "name": "José Alberto Torres León",
