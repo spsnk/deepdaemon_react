@@ -41,7 +41,7 @@
     },
     "torreslj": {
         "name": "José Alberto Torres León",
-        "from": "Graduado ESCOM <br/> Estudiante | CIC IPN",
+        "from": "Graduado ESCOM IPN <br/> Estudiante | CIC IPN",
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/jos%C3%A9-alberto-torres-00a446140/",
         "email": "alberto.torres@deepdaemon.org",
@@ -57,7 +57,7 @@
         "email": "arturo.rocha@deepdaemon.org",
         "flavor": "Estudiante de maestría en ciencias en ingeniería de computo, interés en programación de backend, procesamiento de lenguaje natural y aprendizaje automático.",
         "photo": "rochara.jpg",
-        "status": "Graduate"
+        "status": "graduate"
     },
     "hernandezra": {
         "name": "Augusto I. Hernández Ruiz",
@@ -71,17 +71,17 @@
     },
     "quirogame": {
         "name": "Edgar Abel Quiroga Maldonado",
-        "from": "Estudiante | CIC IPN",
+        "from": "Graduado | CIC IPN",
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/edgar-abel-quiroga-maldonado-26a354162",
         "email": "abel.quiroga@deepdaemon.org",
         "flavor": "Entusiasta de la tecnología altamente preparado para el desarrollo de software, capaz, confiable, puntual y amable son cualidades que lo representan.",
         "photo": "quirogame.jpg",
-        "status": "current"
+        "status": "graduate"
     },
     "hernandezme": {
         "name": "Eduardo Hernandez Martinez",
-        "from": "Estudiante | ESCOM IPN",
+        "from": " Graduado ESCOM IPN <br/> Servicio Social | CIC IPN",
         "projects": [],
         "linkedin": "url",
         "email": "none",
@@ -91,7 +91,7 @@
     },
     "antoniofj": {
         "name": "José Antonio Faustinos",
-        "from": "Estudiante | ESCOM IPN",
+        "from": "Graduado ESCOM IPN <br/> Estudiante | CIC IPN",
         "projects": [],
         "linkedin": "url",
         "email": "none",
@@ -101,13 +101,13 @@
     },
     "vargasmi": {
         "name": "Israel Agustin Vargas Monroy",
-        "from": "Estudiante | ESCOM IPN",
+        "from": "Posadas | ESCOM IPN",
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/israel-a-vargas-monroy-18155a134/",
         "email": "israel.vargas@deepdaemon.org",
         "flavor": "Me considero como un ingeniero capaz, motivado y orientado a poder desarrollar soluciones a problemas a través de mis capacidades preparado para afrontar retos.",
         "photo": "vargasmi.jpg",
-        "status": "current"
+        "status": "graduate"
     },
     "morenojc": {
         "name": "Juan Carlos Moreno Torres",
@@ -121,13 +121,13 @@
     },
     "balderassj": {
         "name": "Juan Manuel Balderas Sánchez",
-        "from": "Estudiante | ESCOM IPN",
+        "from": "Posadas | ESCOM IPN",
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/juanbalderas",
         "email": "juan.balderas@deepdaemon.org",
         "flavor": "Ingeniero en sistemas computacionales interesado en analizar, diseñar e implementar soluciones a problemas sociales mediante procesos científicos y tecnológicos.",
         "photo": "balderassj.jpg",
-        "status": "current"
+        "status": "graduate"
     },
     "morenosm": {
         "name": "Miguelangel Moreno Sotelo",
@@ -141,7 +141,7 @@
     },
     "bustamantepo": {
         "name": "Oliver Bustamante Peralta",
-        "from": "Estudiante | ESCOM IPN",
+        "from": "Graduado ESCOM IPN <br/> Estudiante | CIC IPN",
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/oliver-bustamante-peralta-a8b9ba95/",
         "email": "oliver.bustamante@deepdaemon.org",
@@ -161,7 +161,7 @@
     },
     "lopezja": {
         "name": "Anayantzin Paola Lopez Juarez",
-        "from": "Estudiante | ESCOM IPN",
+        "from": "Everis | ESCOM IPN",
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/anayantzin-paola-l%C3%B3pez-ju%C3%A1rez-a5a709140/",
         "email": "anayatzin.lopez@deepdaemon.org",
@@ -171,7 +171,7 @@
     },
     "burciagaor": {
         "name": "Rodrigo Andrés Burciaga Ornelas",
-        "from": "Estudiante | ESCOM IPN",
+        "from": "Servicio Social | CIC IPN",
         "projects": [],
         "linkedin": "https://www.linkedin.com/in/israel-a-vargas-monroy-18155a134/",
         "email": "israel.vargas@deepdaemon.org",
