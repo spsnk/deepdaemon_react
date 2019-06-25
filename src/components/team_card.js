@@ -20,10 +20,9 @@ const Team_card = ({ team, sort = false, status = "current" }) => {
                                 <Card.Title>{team[key].name}</Card.Title>
                                 <Card.Text>
                                     {
-                                        team[key].from.map((item, key) =>
-                                            (
-                                                <span key={key}>{item}<br /></span>
-                                            )
+                                        team[key].from.map((item, key) => {
+                                            return (<span key={key}>{item}<br /></span>);
+                                        }
                                         )
                                     } <br />
                                     <a href={team[key].linkedin} target="_blank" alt="linkedin" rel="noopener noreferrer">
