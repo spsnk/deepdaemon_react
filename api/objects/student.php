@@ -11,9 +11,10 @@ class Student
     public $linkedin;
     public $email;
     public $short_desc;
-    public $long_desc
+    public $long_desc;
     public $status;
     public $photo_filename;
+    public $ss;
 
     // constructor with $db as database connection
     public function __construct($db)
