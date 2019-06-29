@@ -23,7 +23,7 @@ if($num>0)
 {
     // students array
     $students_arr=array();
-    $students_arr["records"]=array();
+    //$students_arr["records"]=array();
 
     // retrieve our table contents
     // fetch() is faster than fetchAll()
@@ -35,7 +35,6 @@ if($num>0)
         extract($row);
 
         $student_item=array(
-            "id" => $id,
             "name" => $name,
             "lastname" => $lastname,
             "linkedin" => $linkedin,
@@ -45,8 +44,8 @@ if($num>0)
             "status" => $status,
             "photo_filename" => $photo_filename
         );
-
-        array_push($students_arr["records"], $student_item);
+        $students_arr[$id] = $student_item;
+        //array_push($students_arr["records"], $student_item);
     }
 
     // set response code - 200 OK
