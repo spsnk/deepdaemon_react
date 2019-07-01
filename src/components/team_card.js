@@ -1,46 +1,95 @@
-import React from 'react';
-import Card from 'react-bootstrap/Card';
-import CardDeck from 'react-bootstrap/CardDeck';
-import Image from 'react-bootstrap/Image'
-import './team_card.css';
-
-const Team_card = ({ team, sort = false, status = "current" }) => {
-    let sorted = Object.keys(team);
-    if (sort) {
-        sorted.sort();
-    }
-    return (
+import React from "react";
+import Card from "react-bootstrap/Card";
+import CardDeck from "react-bootstrap/CardDeck";
+import Image from "react-bootstrap/Image";
+import "./team_card.css";
+class Team_card extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: null,
+      isLoaded: false,
+      team: {}
+    };
+  }
+  componentDidMount() {
+    //fetch("http://api.deepdaemon.org/student/read")
+    fetch("http://localhost:3961/api/student/read.php", {
+      method: "POST",
+      body: JSON.stringify({ status: this.props.status })
+    })
+      .then(res => res.json())
+      .then(
+        result => {
+          this.setState({
+            isLoaded: true,
+            team: result
+          });
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        error => {
+          this.setState({
+            isLoaded: true,
+            error
+          });
+        }
+      );
+  }
+  render() {
+    const { error, isLoaded, team } = this.state;
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    } else if (!isLoaded) {
+      return <div>Loading...</div>;
+    } else {
+      return (
         <CardDeck>
-            {
-                sorted.map(key => {
-                    if (team[key].status === status)
-                        return (<Card key={key} className="team">
-                            <Image className="" roundedCircle src={require(`../assets/img/team/small/${team[key].photo}`)} alt={team[key].photo} />
-                            <Card.Header>
-                                <Card.Title>{team[key].name}</Card.Title>
-                                <Card.Text>
-                                    {
-                                        team[key].from.map((item, key) => {
-                                            return (<span key={key}>{item}<br /></span>);
-                                        }
-                                        )
-                                    } <br />
-                                    <a href={team[key].linkedin} target="_blank" alt="linkedin" rel="noopener noreferrer">
-                                        <span className="fab fa-linkedin" />
-                                    </a>
-                                    <a href={"mailto:" + team[key].email} target="_blank" alt="email" rel="noopener noreferrer">
-                                        <span className="fas fa-envelope" />
-                                    </a>
-                                </Card.Text>
-                            </Card.Header>
-                            <Card.Body>{team[key].flavor}</Card.Body>
-                        </Card>);
-                    else
-                        return (null);
-                })
-            }
+          {team.map(person => {
+            return (
+              <Card key={person.id} className="team">
+                <Image
+                  roundedCircle
+                  src={require(`../assets/img/team/small/${
+                    person.photo_filename
+                  }`)}
+                  alt={person.photo_filename}
+                />
+                <Card.Header>
+                  <Card.Title>{person.name}</Card.Title>
+                  <Card.Text>
+                    {
+                      // person.from.map((item, key) => {
+                      //        return (<span key={key}>{item}<br /></span>);
+                      //    })
+                    }
+                    <a
+                      href={person.linkedin}
+                      target="_blank"
+                      alt="linkedin"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="fab fa-linkedin" />
+                    </a>
+                    <a
+                      href={"mailto:" + person.email}
+                      target="_blank"
+                      alt="email"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="fas fa-envelope" />
+                    </a>
+                  </Card.Text>
+                </Card.Header>
+                <Card.Body>{person.short_desc}</Card.Body>
+              </Card>
+            );
+          })}
         </CardDeck>
-    )
-};
+      );
+    }
+  }
+}
 
 export default Team_card;

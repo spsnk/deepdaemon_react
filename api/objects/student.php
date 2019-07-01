@@ -22,10 +22,10 @@ class Student
         $this->conn = $db;
     }
 
-    function read()
+    function read($status)
     {
         // select all query
-        $query = "SELECT * FROM $this->table_name s ORDER BY s.lastname DESC";
+        $query = "SELECT * FROM $this->table_name s WHERE s.status LIKE '$status' ORDER BY s.lastname DESC";
         // prepare query statement
         $stmt = $this->conn->prepare($query);
         // execute query

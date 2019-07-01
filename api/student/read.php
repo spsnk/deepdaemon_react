@@ -14,8 +14,12 @@ $db = $database->getConnection();
 // initialize object
 $student = new Student($db);
 
+// get posted data
+$data = json_decode(file_get_contents("php://input"));
+$status = !empty($data->status)?$data->status:"current";
+
 // query students
-$stmt = $student->read();
+$stmt = $student->read($status);
 $num = $stmt->rowCount();
 
 // check if more than 0 record found
@@ -35,16 +39,16 @@ if($num>0)
         extract($row);
 
         $student_item=array(
-            "name" => $name,
-            "lastname" => $lastname,
+            "id"=> $id,
+            "name" => $name . " " . $lastname,
             "linkedin" => $linkedin,
             "email" => $email,
             "short_desc" => $short_desc,
-            "long_desc" => $long_desc,
-            "status" => $status,
+            //"long_desc" => $long_desc,
+            //"status" => $status,
             "photo_filename" => $photo_filename
         );
-        $students_arr[$id] = $student_item;
+        array_push($students_arr,$student_item);
     }
 
     // set response code - 200 OK
