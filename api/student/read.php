@@ -45,7 +45,6 @@ if($num>0)
             "photo_filename" => $photo_filename
         );
         $students_arr[$id] = $student_item;
-        //array_push($students_arr["records"], $student_item);
     }
 
     // set response code - 200 OK

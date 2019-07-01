@@ -11,11 +11,11 @@ class Database{
     // getting database credentials from json file
     public function __construct() {
         $json = file_get_contents( __DIR__ . "/credentials.json");
-        $credentials     = json_decode($json,true);
-        $this->host     = $credentials['host'];
-        $this->db_name  = $credentials['database'];
-        $this->username = $credentials['user'];
-        $this->password = $credentials['password'];
+        $credentials     = json_decode($json);
+        $this->host     = $credentials->host;
+        $this->db_name  = $credentials->database;
+        $this->username = $credentials->user;
+        $this->password = $credentials->password;
     }
 
     // get the database connection
