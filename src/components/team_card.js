@@ -1,8 +1,8 @@
-import React from "react";
-import Card from "react-bootstrap/Card";
-import CardDeck from "react-bootstrap/CardDeck";
-import Image from "react-bootstrap/Image";
-import "./team_card.css";
+import React from 'react';
+import Card from 'react-bootstrap/Card';
+import CardDeck from 'react-bootstrap/CardDeck';
+import Image from 'react-bootstrap/Image';
+import './team_card.css';
 class Team_card extends React.Component {
   constructor(props) {
     super(props);
@@ -13,14 +13,13 @@ class Team_card extends React.Component {
     };
   }
   componentDidMount() {
-    //fetch("http://api.deepdaemon.org/student/read")
-    fetch("http://localhost:3961/api/student/read.php", {
-      method: "POST",
+    fetch('http://api.deepdaemon.org/student/read', {
+      method: 'POST',
       body: JSON.stringify({ status: this.props.status })
     })
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(
-        result => {
+        (result) => {
           this.setState({
             isLoaded: true,
             team: result
@@ -29,7 +28,7 @@ class Team_card extends React.Component {
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
         // exceptions from actual bugs in components.
-        error => {
+        (error) => {
           this.setState({
             isLoaded: true,
             error
@@ -46,7 +45,7 @@ class Team_card extends React.Component {
     } else {
       return (
         <CardDeck>
-          {team.map(person => {
+          {team.map((person) => {
             return (
               <Card key={person.id} className="team">
                 <Image
@@ -73,7 +72,7 @@ class Team_card extends React.Component {
                       <span className="fab fa-linkedin" />
                     </a>
                     <a
-                      href={"mailto:" + person.email}
+                      href={person.email ? `mailto:${person.email}` : null}
                       target="_blank"
                       alt="email"
                       rel="noopener noreferrer"
