@@ -5,28 +5,24 @@ header("Content-Type: application/json; charset=UTF-8");
 
 // include database and object files
 include_once '../config/database.php';
-include_once '../objects/student.php';
+include_once '../objects/project.php';
 
-// instantiate database and student object
+// instantiate database and project object
 $database = new Database();
 $db = $database->getConnection();
 
 // initialize object
-$student = new Student($db);
+$project = new Project($db);
 
-// get posted data
-$data = json_decode(file_get_contents("php://input"));
-$status = empty($data->status)?"current":$data->status;
-
-// query students
-$stmt = $student->read($status);
+// query project
+$stmt = $project->read();
 $num = $stmt->rowCount();
 
 // check if more than 0 record found
 if($num>0)
 {
-    // students array
-    $students_arr=array();
+    // projects array
+    $projects=array();
 
     // retrieve our table contents
     // fetch() is faster than fetchAll()
@@ -37,32 +33,32 @@ if($num>0)
         // just $name only
         extract($row);
 
-        $student_item=array(
+        $project=array(
             "id"=> $id,
-            "name" => $name . " " . $lastname,
-            "linkedin" => $linkedin,
-            "email" => $email,
-            "short_desc" => $short_desc,
-            //"long_desc" => $long_desc,
-            //"status" => $status,
-            "photo_filename" => $photo_filename
+            "name" => $name,
+            "desc" => $desc,
+            "impact" => $impact,
+            "front_img" => $front_img,
+            "modal_content" => $modal_content,
+            "modal_type" => $modal_type,
+            "link" => $link
         );
-        array_push($students_arr,$student_item);
+        array_push($projects,$project);
     }
 
     // set response code - 200 OK
     http_response_code(200);
 
-    // show students data in json format
-    echo json_encode($students_arr);
+    // show projects data in json format
+    echo json_encode($projects);
 }
 else
 {
     // set response code - 404 Not found
     http_response_code(404);
-    // tell the user no students found
+    // tell the user no projects found
     echo json_encode(
-        array("message" => "No students found.")
+        array("message" => "No projects found.")
     );
 }
 

@@ -1,20 +1,16 @@
 <?php
-class Student
+class Project
 {
     // database connection and table name
     private $conn;
-    private $table_name = "student";
+    private $table_name = "project";
     // object properties
     public $id;
     public $name;
-    public $lastname;
-    public $linkedin;
-    public $email;
-    public $short_desc;
-    public $long_desc;
-    public $status;
-    public $photo_filename;
-    public $ss;
+    public $desc;
+    public $impact;
+    public $front_img;
+    public $modal_img;
 
     // constructor with $db as database connection
     public function __construct($db)
@@ -22,10 +18,10 @@ class Student
         $this->conn = $db;
     }
 
-    function read($status)
+    function read()
     {
         // select all query
-        $query = "SELECT * FROM $this->table_name s WHERE s.status LIKE '$status' ORDER BY s.lastname";
+        $query = "SELECT * FROM $this->table_name p ORDER BY p.name";
         // prepare query statement
         $stmt = $this->conn->prepare($query);
         // execute query
