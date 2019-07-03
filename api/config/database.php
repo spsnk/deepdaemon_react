@@ -11,8 +11,6 @@ class Database
 
     // getting database credentials from json file
     public function __construct() {
-        //$json = file_get_contents( __DIR__ . "/credentials.json");
-        //$credentials     = json_decode($json);
         $this->host     = "deepdaemon.org";
         $this->db_name  = "deepdaem_web";
         $this->username = "deepdaem_web";
