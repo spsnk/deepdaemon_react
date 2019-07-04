@@ -4,6 +4,9 @@ import CardDeck from 'react-bootstrap/CardDeck';
 import Image from 'react-bootstrap/Image';
 import './team_card.css';
 class Team_card extends React.Component {
+  static defaultProps = {
+    status: 'current'
+  };
   constructor(props) {
     super(props);
     this.state = {
@@ -13,13 +16,8 @@ class Team_card extends React.Component {
     };
   }
   componentDidMount() {
-    fetch('//api.deepdaemon.org/student/read.php', {
-      method: 'GET',
-      body: JSON.stringify({ status: this.props.status }),
-      headers: {
-        'Content-Type': 'application/json'
-        // 'Content-Type': 'application/x-www-form-urlencoded',
-      }
+    fetch('//api.deepdaemon.org/students/' + this.props.status, {
+      method: 'GET'
     })
       .then((res) => res.json())
       .then(
