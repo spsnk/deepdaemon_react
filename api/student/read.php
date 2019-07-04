@@ -1,7 +1,8 @@
 <?php
 // required headers
 header("Access-Control-Allow-Origin: *");
-header("Content-Type: application/json; charset=UTF-8");
+header("Access-Control-Allow-Headers: *");
+header("Content-Type: application/json");
 
 // include database and object files
 include_once '../config/database.php';
@@ -19,7 +20,7 @@ $data = json_decode(file_get_contents("php://input"));
 $status = empty($data->status)?"current":$data->status;
 
 // query students
-$stmt = $student->read($status);
+$stmt = $student->read_all($status);
 $num = $stmt->rowCount();
 
 // check if more than 0 record found
@@ -39,13 +40,14 @@ if($num>0)
 
         $student_item=array(
             "id"=> $id,
-            "name" => $name . " " . $lastname,
+            "name" => $name,
             "linkedin" => $linkedin,
             "email" => $email,
             "short_desc" => $short_desc,
-            //"long_desc" => $long_desc,
-            //"status" => $status,
-            "photo_filename" => $photo_filename
+            "photo_filename" => $photo_filename,
+            "grade" => explode(",",$grade),
+            "career" => explode(",", $career),
+            "school" => explode(",", $school)
         );
         array_push($students_arr,$student_item);
     }

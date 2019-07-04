@@ -22,10 +22,20 @@ class Student
         $this->conn = $db;
     }
 
-    function read($status)
+    function read_all($status)
     {
         // select all query
-        $query = "SELECT * FROM $this->table_name s WHERE s.status LIKE '$status' ORDER BY s.lastname";
+        $query =   "SELECT student.id, CONCAT( student.name, ' ', student.lastname) AS name,
+                            student.linkedin, student.email, student.short_desc, student.photo_filename,
+                            GROUP_CONCAT( grade.type ) AS grade,
+                            GROUP_CONCAT( career.short_name ) AS career,
+                            GROUP_CONCAT( school.short_name ) AS school
+                    FROM student
+                    left JOIN grade  ON grade.id_student = student.id
+                    left JOIN career ON career.id = grade.id_career
+                    left JOIN school ON school.id = grade.id_school
+                    WHERE student.status LIKE '$status'
+                    GROUP BY student.id;";
         // prepare query statement
         $stmt = $this->conn->prepare($query);
         // execute query

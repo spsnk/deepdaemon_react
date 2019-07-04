@@ -14,7 +14,7 @@ class Database
         $this->host     = "deepdaemon.org";
         $this->db_name  = "deepdaem_web";
         $this->username = "deepdaem_web";
-        $this->password = "password";
+        $this->password = "LATLpc5y49i2";
     }
 
     // get the database connection
