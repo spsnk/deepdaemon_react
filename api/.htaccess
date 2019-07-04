@@ -1,3 +1,10 @@
 RewriteEngine On # Turn on the rewriting engine
+
+#Rules for student
 RewriteRule ^students/?$ students.php [NC,L]
-RewriteRule ^students/([0-9]+)/?$ students.php?id=$1 [NC,L]
+RewriteRule ^students/([0-9]+)/?$ students.php?student_id=$1 [NC,L]
+RewriteRule ^students/([a-zA-Z]+)/?$ students.php?status=$1 [NC,L]
+
+#Rules for projects
+RewriteRule ^projects/?$ projects.php [NC,L]
+RewriteRule ^projects/([0-9]+)/?$ projects.php?project_id=$1 [NC,L]
