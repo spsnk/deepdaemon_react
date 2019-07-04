@@ -35,7 +35,8 @@ class Student
                     left JOIN career ON career.id = grade.id_career
                     left JOIN school ON school.id = grade.id_school
                     WHERE student.status LIKE '$status'
-                    GROUP BY student.id;";
+                    GROUP BY student.id
+                    ORDER BY student.lastname;";
         // prepare query statement
         $stmt = $this->conn->prepare($query);
         // execute query
