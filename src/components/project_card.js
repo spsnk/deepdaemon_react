@@ -14,7 +14,7 @@ class Project_card extends React.Component {
     };
   }
   componentDidMount() {
-    fetch('//api.deepdaemon.org/project/read')
+    fetch('//api.deepdaemon.org/project/read.php')
       .then((res) => res.json())
       .then(
         (result) => {

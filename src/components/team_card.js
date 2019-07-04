@@ -13,9 +13,13 @@ class Team_card extends React.Component {
     };
   }
   componentDidMount() {
-    fetch('//api.deepdaemon.org/student/read', {
-      method: 'POST',
-      body: JSON.stringify({ status: this.props.status })
+    fetch('//api.deepdaemon.org/student/read.php', {
+      method: 'GET',
+      body: JSON.stringify({ status: this.props.status }),
+      headers: {
+        'Content-Type': 'application/json'
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      }
     })
       .then((res) => res.json())
       .then(
