@@ -5,7 +5,7 @@ SET
 START TRANSACTION;
 SET
   time_zone = "+00:00";
-CREATE DATABASE IF NOT EXISTS `deepdaem_web` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS `deepdaem_web` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `deepdaem_web`;
 DROP TABLE IF EXISTS `career`;
 CREATE TABLE `career` (
@@ -38,6 +38,11 @@ CREATE TABLE `project_student` (
     `id_student` int(10) UNSIGNED NOT NULL,
     `id_project` int(10) UNSIGNED NOT NULL
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
+DROP TABLE IF EXISTS `project_tech`;
+CREATE TABLE `project_tech` (
+    `id_project` int(10) UNSIGNED NOT NULL,
+    `id_tech` int(10) UNSIGNED NOT NULL
+  ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
 DROP TABLE IF EXISTS `school`;
 CREATE TABLE `school` (
     `id` int(10) UNSIGNED NOT NULL,
@@ -56,6 +61,13 @@ CREATE TABLE `student` (
     `status` enum('current', 'graduate', 'leader', 'out') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'current',
     `photo_filename` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'user.png',
     `ss` tinyint(1) NOT NULL DEFAULT '0'
+  ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
+DROP TABLE IF EXISTS `tech`;
+CREATE TABLE `tech` (
+    `id` int(10) UNSIGNED NOT NULL,
+    `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Tecnologia',
+    `desc` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Descripción',
+    `icon` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'tech.png'
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
 ALTER TABLE
   `career`
@@ -84,6 +96,12 @@ ADD
 ADD
   KEY `FK__student` (`id_student`);
 ALTER TABLE
+  `project_tech`
+ADD
+  PRIMARY KEY (`id_project`, `id_tech`),
+ADD
+  KEY `FK__tech` (`id_tech`);
+ALTER TABLE
   `school`
 ADD
   PRIMARY KEY (`id`, `short_name`);
@@ -91,6 +109,10 @@ ALTER TABLE
   `student`
 ADD
   PRIMARY KEY (`id`, `name`, `lastname`);
+ALTER TABLE
+  `tech`
+ADD
+  PRIMARY KEY (`id`, `name`);
 ALTER TABLE
   `career`
 MODIFY
@@ -108,6 +130,10 @@ ALTER TABLE
 MODIFY
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 ALTER TABLE
+  `tech`
+MODIFY
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE
   `grade`
 ADD
   CONSTRAINT `FK_grade_career` FOREIGN KEY (`id_career`) REFERENCES `career` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -121,4 +147,10 @@ ADD
   CONSTRAINT `FK__project` FOREIGN KEY (`id_project`) REFERENCES `project` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
 ADD
   CONSTRAINT `FK__student` FOREIGN KEY (`id_student`) REFERENCES `student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE
+  `project_tech`
+ADD
+  CONSTRAINT `FK__project_tech` FOREIGN KEY (`id_project`) REFERENCES `project` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD
+  CONSTRAINT `FK__tech` FOREIGN KEY (`id_tech`) REFERENCES `tech` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
