@@ -8,29 +8,29 @@ header("Content-Type: application/json; charset=UTF-8");
 // include database and util files
 include_once './config/database.php';
 include_once './config/util.php';
-include_once './objects/student.php';
+include_once './objects/member.php';
 
 // instantiate database object
 $database = new Database();
 $db = $database->getConnection();
 
 // initialize object
-$student = new Student($db);
+$member = new Member($db);
 
 $request_method=$_SERVER["REQUEST_METHOD"];
 switch($request_method)
 {
     case 'GET':
-        // Retrive Students
-        if(!empty($_GET["student_id"]))
+        // Retrive members
+        if(!empty($_GET["member_id"]))
         {
-            $student_id=intval($_GET["student_id"]);
-            $student->read($student_id);
+            $member_id=intval($_GET["member_id"]);
+            $member->read($member_id);
         }
         else
         {
             $status = empty($_GET["status"])?"current":$_GET["status"];
-            $student->read_all($status);
+            $member->read_all($status);
         }
         break;
     case 'POST':

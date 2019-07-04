@@ -1,5 +1,5 @@
 <?php
-class Student
+class Member
 {
     // database connection and table name
     private $conn;
@@ -24,18 +24,18 @@ class Student
     function read_all($status)
     {
         // select all query
-        $query =   "SELECT student.id, CONCAT( student.name, ' ', student.lastname) AS name,
-                            student.linkedin, student.email, student.short_desc, student.photo_filename,
+        $query =   "SELECT member.id, CONCAT( member.name, ' ', member.lastname) AS name,
+                            member.linkedin, member.email, member.short_desc, member.photo_filename,
                             GROUP_CONCAT( grade.type ) AS grade,
                             GROUP_CONCAT( career.short_name ) AS career,
                             GROUP_CONCAT( school.short_name ) AS school
-                    FROM student
-                    left JOIN grade  ON grade.id_student = student.id
+                    FROM member
+                    left JOIN grade  ON grade.id_member = member.id
                     left JOIN career ON career.id = grade.id_career
                     left JOIN school ON school.id = grade.id_school
-                    WHERE student.status LIKE '$status'
-                    GROUP BY student.id
-                    ORDER BY student.lastname;";
+                    WHERE member.status LIKE '$status'
+                    GROUP BY member.id
+                    ORDER BY member.lastname;";
         // prepare query statement
         $stmt = $this->conn->prepare($query);
         // execute query
@@ -46,17 +46,17 @@ class Student
     function read($id)
     {
         // select all query
-        $query =   "SELECT student.id, CONCAT( student.name, ' ', student.lastname) AS name,
-                            student.linkedin, student.email, student.short_desc, student.photo_filename,
+        $query =   "SELECT member.id, CONCAT( member.name, ' ', member.lastname) AS name,
+                            member.linkedin, member.email, member.short_desc, member.photo_filename,
                             GROUP_CONCAT( grade.type ) AS grade,
                             GROUP_CONCAT( career.short_name ) AS career,
                             GROUP_CONCAT( school.short_name ) AS school
-                    FROM student
-                    left JOIN grade  ON grade.id_student = student.id
+                    FROM member
+                    left JOIN grade  ON grade.id_member = member.id
                     left JOIN career ON career.id = grade.id_career
                     left JOIN school ON school.id = grade.id_school
-                    WHERE student.id = $id
-                    GROUP BY student.id;";
+                    WHERE member.id = $id
+                    GROUP BY member.id;";
         // prepare query statement
         $stmt = $this->conn->prepare($query);
         // execute query
@@ -70,8 +70,8 @@ class Student
         // check if more than 0 record found
         if($num>0)
         {
-            // students array
-            $students_arr=array();
+            // members array
+            $members_arr=array();
             // retrieve our table contents
             // fetch() is faster than fetchAll()
             // http://stackoverflow.com/questions/2770630/pdofetchall-vs-pdofetch-in-a-loop
@@ -81,7 +81,7 @@ class Student
                 // just $name only
                 extract($row);
 
-                $student_item=array(
+                $member_item=array(
                     "id"=> $id,
                     "name" => $name,
                     "linkedin" => $linkedin,
@@ -92,22 +92,22 @@ class Student
                     "career" => explode(",", $career),
                     "school" => explode(",", $school)
                 );
-                array_push($students_arr,$student_item);
+                array_push($members_arr,$member_item);
             }
 
             // set response code - 200 OK
             http_response_code(200);
 
-            // show students data in json format
-            echo json_encode($students_arr);
+            // show members data in json format
+            echo json_encode($members_arr);
         }
         else
         {
             // set response code - 404 Not found
             http_response_code(404);
-            // tell the user no students found
+            // tell the user no members found
             echo json_encode(
-                array("message" => "No students found.")
+                array("message" => "No members found.")
             );
         }
     }
