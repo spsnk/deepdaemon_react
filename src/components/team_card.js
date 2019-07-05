@@ -72,7 +72,8 @@ class Team_card extends React.Component {
                               overlay={<Tooltip>{person.career_long[key]}</Tooltip>} >
                               <span className='from'>{item}</span>
                             </OverlayTrigger>
-                            <OverlayTrigger
+                            @
+                              <OverlayTrigger
                               placement='top'
                               overlay={<Tooltip>{person.school_long[key]}</Tooltip>} >
                               <span className='from'>{person.school[key]}</span>

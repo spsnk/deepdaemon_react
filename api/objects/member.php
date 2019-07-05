@@ -81,7 +81,6 @@ class Member
                 // this will make $row['name'] to
                 // just $name only
                 extract($row);
-
                 $member_item = array(
                     "id" => $id,
                     "name" => $name,
@@ -89,10 +88,10 @@ class Member
                     "email" => $email,
                     "short_desc" => $short_desc,
                     "photo_filename" => $photo_filename,
-                    "career" => explode(",", $career),
-                    "school" => explode(",", $school),
-                    "career_long" => explode(",", $career_long),
-                    "school_long" => explode(",", $school_long),
+                    "career" => is_null($career) ? [] : explode(",", $career),
+                    "school" => is_null($school) ? [] : explode(",", $school),
+                    "career_long" => is_null($career_long) ? [] : explode(",", $career_long),
+                    "school_long" => is_null($school_long) ? [] : explode(",", $school_long),
                 );
                 array_push($members_arr, $member_item);
             }
