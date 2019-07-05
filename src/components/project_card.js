@@ -15,15 +15,15 @@ class Project_card extends React.Component {
   }
   componentDidMount() {
     fetch('//api.deepdaemon.org/projects/', { method: 'GET' })
-      .then((res) => res.json())
+      .then(res => res.json())
       .then(
-        (result) => {
+        result => {
           this.setState({
             isLoaded: true,
             projects: result
           });
         },
-        (error) => {
+        error => {
           this.setState({
             isLoaded: true,
             error
@@ -40,7 +40,7 @@ class Project_card extends React.Component {
     } else {
       return (
         <CardDeck>
-          {projects.map((project) => (
+          {projects.map(project => (
             <Card key={project.id} className="project">
               <Card.Header>{project.name}</Card.Header>
               <Card.Img

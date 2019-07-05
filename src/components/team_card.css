@@ -1,18 +1,25 @@
 .team.card {
-    border: none;
-    height: 30rem;
-    max-width: 35rem;
-    min-width: 25rem;
-    background-color:transparent;
+  border: none;
+  height: 30rem;
+  max-width: 35rem;
+  min-width: 25rem;
+  background-color: transparent;
 }
 .team.card img {
-    width: 150px;
-    display: block;
-    margin: auto;
+  width: 150px;
+  display: block;
+  margin: auto;
 }
 
-.team.card a{
-    font-size: 1.25rem;
-    display: inline-block;
-    margin: 2px;
+.team.card a {
+  font-size: 1.25rem;
+  display: inline-block;
+  margin: 2px;
+}
+
+.team.card .from {
+  font-size: 0.9rem;
+  padding: 0 0.25rem;
+  display: inline-block;
+  cursor: default;
 }
