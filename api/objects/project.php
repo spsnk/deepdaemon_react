@@ -20,7 +20,7 @@ class Project
     function read_all()
     {
         // select all query
-        $query =   "SELECT p.id, p.name, p.front_img
+        $query =   "SELECT p.*
                     FROM project p
                     ORDER BY p.name;";
         // prepare query statement
@@ -67,7 +67,7 @@ class Project
                     "desc" => $desc,
                     "impact" => $impact,
                     "front_img" => $front_img,
-                    "modal_content" => $modal_content,
+                    "modal_media" => $modal_media,
                     "modal_type" => $modal_type,
                     "link" => $link
                 );
