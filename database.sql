@@ -5,6 +5,7 @@ SET
 START TRANSACTION;
 SET
   time_zone = "+00:00";
+DROP DATABASE IF EXISTS `deepdaem_web`;
 CREATE DATABASE IF NOT EXISTS `deepdaem_web` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `deepdaem_web`;
 DROP TABLE IF EXISTS `career`;
@@ -15,12 +16,25 @@ CREATE TABLE `career` (
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
 DROP TABLE IF EXISTS `grade`;
 CREATE TABLE `grade` (
-    `id_student` int(10) UNSIGNED NOT NULL DEFAULT '0',
+    `id_member` int(10) UNSIGNED NOT NULL DEFAULT '0',
     `id_career` int(10) UNSIGNED NOT NULL DEFAULT '0',
     `id_school` int(10) UNSIGNED NOT NULL DEFAULT '0',
     `type` enum('bachelor', 'masters', 'phd') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'bachelor',
     `start` date NOT NULL,
     `end` date NOT NULL
+  ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
+DROP TABLE IF EXISTS `member`;
+CREATE TABLE `member` (
+    `id` int(10) UNSIGNED NOT NULL,
+    `name` varchar(25) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Alumno',
+    `lastname` varchar(25) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Alumno',
+    `linkedin` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+    `email` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+    `short_desc` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+    `long_desc` text COLLATE utf8_unicode_ci,
+    `status` enum('current', 'graduate', 'leader', 'out') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'current',
+    `photo_filename` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'user.png',
+    `ss` tinyint(1) NOT NULL DEFAULT '0'
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
 DROP TABLE IF EXISTS `project`;
 CREATE TABLE `project` (
@@ -29,13 +43,13 @@ CREATE TABLE `project` (
     `desc` varchar(500) COLLATE utf8_unicode_ci DEFAULT NULL,
     `impact` varchar(500) COLLATE utf8_unicode_ci DEFAULT NULL,
     `front_img` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'project_front.jpg',
-    `modal_content` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'project_modal.jpg',
+    `modal_media` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'project_modal.jpg',
     `modal_type` enum('image', 'video', 'embed') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'image',
     `link` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
-DROP TABLE IF EXISTS `project_student`;
-CREATE TABLE `project_student` (
-    `id_student` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `project_member`;
+CREATE TABLE `project_member` (
+    `id_member` int(10) UNSIGNED NOT NULL,
     `id_project` int(10) UNSIGNED NOT NULL
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
 DROP TABLE IF EXISTS `project_tech`;
@@ -48,19 +62,6 @@ CREATE TABLE `school` (
     `id` int(10) UNSIGNED NOT NULL,
     `short_name` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
     `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL
-  ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
-DROP TABLE IF EXISTS `student`;
-CREATE TABLE `student` (
-    `id` int(10) UNSIGNED NOT NULL,
-    `name` varchar(25) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Alumno',
-    `lastname` varchar(25) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Alumno',
-    `linkedin` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-    `email` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
-    `short_desc` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-    `long_desc` text COLLATE utf8_unicode_ci,
-    `status` enum('current', 'graduate', 'leader', 'out') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'current',
-    `photo_filename` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'user.png',
-    `ss` tinyint(1) NOT NULL DEFAULT '0'
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
 DROP TABLE IF EXISTS `tech`;
 CREATE TABLE `tech` (
@@ -76,25 +77,29 @@ ADD
 ALTER TABLE
   `grade`
 ADD
-  PRIMARY KEY (`id_student`, `id_career`, `id_school`),
+  PRIMARY KEY (`id_member`, `id_career`, `id_school`),
 ADD
   KEY `FK_grade_school` (`id_school`),
 ADD
   KEY `FK_grade_career` (`id_career`),
 ADD
-  KEY `FK_grade_student` (`id_student`);
+  KEY `FK_grade_student` (`id_member`);
+ALTER TABLE
+  `member`
+ADD
+  PRIMARY KEY (`id`, `name`, `lastname`);
 ALTER TABLE
   `project`
 ADD
   PRIMARY KEY (`id`);
 ALTER TABLE
-  `project_student`
+  `project_member`
 ADD
-  PRIMARY KEY (`id_student`, `id_project`),
+  PRIMARY KEY (`id_member`, `id_project`),
 ADD
   KEY `FK__project` (`id_project`),
 ADD
-  KEY `FK__student` (`id_student`);
+  KEY `FK__student` (`id_member`);
 ALTER TABLE
   `project_tech`
 ADD
@@ -106,15 +111,15 @@ ALTER TABLE
 ADD
   PRIMARY KEY (`id`, `short_name`);
 ALTER TABLE
-  `student`
-ADD
-  PRIMARY KEY (`id`, `name`, `lastname`);
-ALTER TABLE
   `tech`
 ADD
   PRIMARY KEY (`id`, `name`);
 ALTER TABLE
   `career`
+MODIFY
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE
+  `member`
 MODIFY
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 ALTER TABLE
@@ -126,10 +131,6 @@ ALTER TABLE
 MODIFY
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 ALTER TABLE
-  `student`
-MODIFY
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-ALTER TABLE
   `tech`
 MODIFY
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
@@ -138,15 +139,15 @@ ALTER TABLE
 ADD
   CONSTRAINT `FK_grade_career` FOREIGN KEY (`id_career`) REFERENCES `career` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
 ADD
-  CONSTRAINT `FK_grade_school` FOREIGN KEY (`id_school`) REFERENCES `school` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_grade_member` FOREIGN KEY (`id_member`) REFERENCES `member` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
 ADD
-  CONSTRAINT `FK_grade_student` FOREIGN KEY (`id_student`) REFERENCES `student` (`id`);
+  CONSTRAINT `FK_grade_school` FOREIGN KEY (`id_school`) REFERENCES `school` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE
-  `project_student`
+  `project_member`
 ADD
-  CONSTRAINT `FK__project` FOREIGN KEY (`id_project`) REFERENCES `project` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK__member` FOREIGN KEY (`id_member`) REFERENCES `member` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
 ADD
-  CONSTRAINT `FK__student` FOREIGN KEY (`id_student`) REFERENCES `student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  CONSTRAINT `FK__project` FOREIGN KEY (`id_project`) REFERENCES `project` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE
   `project_tech`
 ADD
