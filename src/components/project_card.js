@@ -45,7 +45,7 @@ class Project_card extends React.Component {
               <Card.Header>{project.name}</Card.Header>
               <Card.Img
                 variant="bottom"
-                src={require(`../assets/img/projects/${project.front_img}`)}
+                src={`${process.env.PUBLIC_URL}/static/img/project/${project.front_img}`}
                 alt={project.front_img}
               />
               <Card.Footer>

@@ -4,6 +4,8 @@ import CardDeck from 'react-bootstrap/CardDeck';
 import Image from 'react-bootstrap/Image';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
+import Spinner from 'react-bootstrap/Spinner';
+import Button from 'react-bootstrap/Button';
 
 import './team_card.css';
 class Team_card extends React.Component {
@@ -48,7 +50,17 @@ class Team_card extends React.Component {
       return <div>Error: {error.message}</div>;
     }
     else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return (<Button variant="primary" disabled>
+        <Spinner
+          as="span"
+          animation="grow"
+          size="sm"
+          role="status"
+          aria-hidden="true"
+        />
+        Loading...
+        </Button>
+      );
     } else {
       return (
         <CardDeck>
@@ -57,7 +69,7 @@ class Team_card extends React.Component {
               <Card key={person.id} className='team'>
                 <Image
                   roundedCircle
-                  src={require(`../assets/img/team/small/${person.photo_filename}`)}
+                  src={`${process.env.PUBLIC_URL}/static/img/team/small/${person.photo_filename}`}
                   alt={person.photo_filename}
                 />
                 <Card.Header>
@@ -73,7 +85,7 @@ class Team_card extends React.Component {
                               <span className='from'>{item}</span>
                             </OverlayTrigger>
                             @
-                              <OverlayTrigger
+                            <OverlayTrigger
                               placement='top'
                               overlay={<Tooltip>{person.school_long[key]}</Tooltip>} >
                               <span className='from'>{person.school[key]}</span>

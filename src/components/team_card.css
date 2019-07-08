@@ -22,6 +22,7 @@
   padding: 0 0.25rem;
   display: inline-block;
   cursor: default;
+  font-weight: 500;
 }
 
 .team.card p {
