@@ -14,8 +14,10 @@ import Navbar from './components/navbar';
 import Projects from './components/project_card';
 import Team from './components/team_card';
 import TeamTabs from './components/team_tabs';
+import ModalMember from './components/modal_member';
 
-function DeepDaemon() {
+function DeepDaemon()
+{
   return (
     <div className="DeepDaemon" id="home">
       <Navbar />
@@ -145,6 +147,7 @@ function DeepDaemon() {
         <hr />
         <footer>&copy; DeepDaemon 2019</footer>
       </Container>
+      <ModalMember />
     </div>
   );
 }

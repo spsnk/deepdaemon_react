@@ -4,6 +4,7 @@
   max-width: 35rem;
   min-width: 25rem;
   background-color: transparent;
+  margin: 1rem auto !important;
 }
 .team.card img {
   width: 150px;

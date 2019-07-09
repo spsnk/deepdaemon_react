@@ -6,13 +6,16 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 import Spinner from 'react-bootstrap/Spinner';
 import Button from 'react-bootstrap/Button';
+import Popover from 'react-bootstrap/Popover';
 
 import './team_card.css';
-class Team_card extends React.Component {
+class Team_card extends React.Component
+{
   static defaultProps = {
     status: 'current'
   };
-  constructor(props) {
+  constructor(props)
+  {
     super(props);
     this.state = {
       error: null,
@@ -20,13 +23,15 @@ class Team_card extends React.Component {
       team: {}
     };
   }
-  componentDidMount() {
+  componentDidMount()
+  {
     fetch('//api.deepdaemon.org/members/' + this.props.status, {
       method: 'GET'
     })
       .then((res) => res.json())
       .then(
-        (result) => {
+        (result) =>
+        {
           this.setState({
             isLoaded: true,
             team: result
@@ -35,7 +40,8 @@ class Team_card extends React.Component {
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
         // exceptions from actual bugs in components.
-        (error) => {
+        (error) =>
+        {
           this.setState({
             isLoaded: true,
             error
@@ -44,12 +50,15 @@ class Team_card extends React.Component {
       );
   }
 
-  render() {
+  render()
+  {
     const { error, isLoaded, team } = this.state;
-    if (error) {
+    if (error)
+    {
       return <div>Error: {error.message}</div>;
     }
-    else if (!isLoaded) {
+    else if (!isLoaded)
+    {
       return (<Button variant="primary" disabled>
         <Spinner
           as="span"
@@ -61,22 +70,30 @@ class Team_card extends React.Component {
         Loading...
         </Button>
       );
-    } else {
+    }
+    else
+    {
       return (
         <CardDeck>
-          {team.map((person) => {
+          {team.map((person) =>
+          {
             return (
               <Card key={person.id} className='team'>
-                <Image
-                  roundedCircle
-                  src={`${process.env.PUBLIC_URL}/static/img/team/small/${person.photo_filename}`}
-                  alt={person.photo_filename}
-                />
+                <OverlayTrigger
+                  placement='auto'
+                  overlay={<Popover id={`popover_${person.id}`} title={person.name}>{person.short_desc}</Popover>} >
+                  <Image
+                    roundedCircle
+                    src={`${process.env.PUBLIC_URL}/static/img/team/small/${person.photo_filename}`}
+                    alt={person.photo_filename}
+                  />
+                </OverlayTrigger>
                 <Card.Header>
                   <Card.Title>{person.name}</Card.Title>
                   <Card.Text>
                     {
-                      person.career.map((item, key) => {
+                      person.career.map((item, key) =>
+                      {
                         return (
                           <span key={key}>
                             <OverlayTrigger
@@ -111,7 +128,6 @@ class Team_card extends React.Component {
                     </a>
                   </Card.Text>
                 </Card.Header>
-                <Card.Body>{person.short_desc}</Card.Body>
               </Card>
             );
           })}
