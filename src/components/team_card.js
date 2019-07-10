@@ -12,8 +12,13 @@ import './team_card.css';
 class Team_card extends React.Component
 {
   static defaultProps = {
-    status: 'current'
+    status: 'current',
+    callback: (text) => alert(text)
   };
+  handleclick (id)
+  {
+    this.props.callback(id);
+  }
   constructor(props)
   {
     super(props);
@@ -86,6 +91,7 @@ class Team_card extends React.Component
                     roundedCircle
                     src={`${process.env.PUBLIC_URL}/static/img/team/small/${person.photo_filename}`}
                     alt={person.photo_filename}
+                    onClick={() => this.handleclick(person.id)}
                   />
                 </OverlayTrigger>
                 <Card.Header>

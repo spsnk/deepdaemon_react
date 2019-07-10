@@ -1,21 +1,21 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Image from 'react-bootstrap/Image';
-import Spinner from 'react-bootstrap/Spinner';
-import Button from 'react-bootstrap/Button';
-
 
 class Modal_member extends React.Component
 {
-  constructor(props)
+  static defaultProps = 
   {
+    member: null
+  }
+  constructor(props)
+  { 
     super(props);
     this.state = {
       showModal: false,
       error: null,
       isLoaded: false,
-      member_id: 21,
-      member: {},
+      member_id: 21
     };
   }
 
@@ -57,12 +57,9 @@ class Modal_member extends React.Component
   }
   render()
   {
-    const { error, isLoaded, member } = this.state;
-    if (error)
-    {
-      return null;
-    }
-    else if (!isLoaded)
+    //const { error, isLoaded } = this.state;
+    const { member } = this.props;
+    if (member == null)
     {
       return null;
     }

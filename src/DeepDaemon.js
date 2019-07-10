@@ -16,6 +16,11 @@ import Team from './components/team_card';
 import TeamTabs from './components/team_tabs';
 import ModalMember from './components/modal_member';
 
+function updateModal (text)
+{
+  this.setState({text})
+}
+
 function DeepDaemon()
 {
   return (
