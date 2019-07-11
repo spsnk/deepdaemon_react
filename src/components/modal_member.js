@@ -62,7 +62,7 @@ class Modal_member extends React.Component {
                 animation="grow"
                 role="status"
                 aria-hidden="true"
-              />{" "}
+              />
               Loading...
             </Modal.Title>
           </Modal.Header>
