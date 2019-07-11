@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
-import logo from "./assets/img/logo.png";
+import logo from "./assets/img/deepdaemon.png";
 import join from "./assets/img/join_team.png";
 import "./assets/icomoon/icomoon.css"; //https://icomoon.io/#preview-free
 
@@ -41,54 +41,49 @@ class DeepDaemon extends React.Component {
     return (
       <div className="DeepDaemon" ref={this.home}>
         <Navbar bg="dark" variant="dark" sticky="top">
-          <Container>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Brand
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Brand>
+            <img src={logo} style={{ width: "30px" }} alt="logo" />
+            DeepDaemon
+          </Navbar.Brand>
+          <Nav className="mr-auto">
+            <Nav.Link
               onClick={() => {
                 this.scroll(this.home);
               }}>
-              <span className="icon icon-rocket"> </span>
-              DeepDaemon
-            </Navbar.Brand>
-            <Nav className="mr-auto">
-              <Nav.Link
-                onClick={() => {
-                  this.scroll(this.home);
-                }}>
-                Home
-              </Nav.Link>
-              <Nav.Link
-                onClick={() => {
-                  this.scroll(this.about);
-                }}>
-                Nosotros
-              </Nav.Link>
-              <Nav.Link
-                onClick={() => {
-                  this.scroll(this.portfolio);
-                }}>
-                Proyectos
-              </Nav.Link>
-              <Nav.Link
-                onClick={() => {
-                  this.scroll(this.leaders);
-                }}>
-                Líderes
-              </Nav.Link>
-              <Nav.Link
-                onClick={() => {
-                  this.scroll(this.team);
-                }}>
-                Equipo
-              </Nav.Link>
-              <Nav.Link
-                onClick={() => {
-                  this.scroll(this.contact);
-                }}>
-                Contacto
-              </Nav.Link>
-            </Nav>
-          </Container>
+              Home
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => {
+                this.scroll(this.about);
+              }}>
+              Nosotros
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => {
+                this.scroll(this.portfolio);
+              }}>
+              Proyectos
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => {
+                this.scroll(this.leaders);
+              }}>
+              Líderes
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => {
+                this.scroll(this.team);
+              }}>
+              Equipo
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => {
+                this.scroll(this.contact);
+              }}>
+              Contacto
+            </Nav.Link>
+          </Nav>
         </Navbar>
         <header className="dd_header">
           <img src={logo} className="ddlogo" alt="logo" />
