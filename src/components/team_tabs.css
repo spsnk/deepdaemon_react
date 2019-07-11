@@ -1,3 +1,6 @@
+.teamtab .nav-item {
+  margin: auto;
+}
 .teamtab .nav-link {
   background-color: transparent;
   color: inherit;
