@@ -10,6 +10,7 @@
   width: 150px;
   display: block;
   margin: auto;
+  cursor: pointer;
 }
 
 .team.card a {
@@ -30,8 +31,7 @@
   margin: 0;
 }
 
-.team .card-header
-{
+.team .card-header {
   padding: 1.25rem;
   margin: auto;
   border-radius: 50px;

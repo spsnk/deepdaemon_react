@@ -1,11 +1,9 @@
-#team .nav-link
-{
-    background-color:transparent;
-    color: inherit;
+.teamtab .nav-link {
+  background-color: transparent;
+  color: inherit;
+  border-radius: 10px;
 }
 
-#team .nav-link.active
-{
-    background-color:rgba(0, 0, 0, 0.1);
-    color: inherit;
+.teamtab .nav-link.active {
+  background-color: rgba(0, 0, 0, 0.1);
 }

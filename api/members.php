@@ -22,7 +22,7 @@ switch($request_method)
 {
     case 'GET':
         // Retrive members
-        if(!empty($_GET["member_id"]))
+        if(isset($_GET["member_id"]))
         {
             $member_id=intval($_GET["member_id"]);
             $member->read($member_id);

@@ -1,26 +1,23 @@
-import React from 'react';
-import Card from 'react-bootstrap/Card';
-import CardDeck from 'react-bootstrap/CardDeck';
-import Image from 'react-bootstrap/Image';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Tooltip from 'react-bootstrap/Tooltip';
-import Spinner from 'react-bootstrap/Spinner';
-import Button from 'react-bootstrap/Button';
-import Popover from 'react-bootstrap/Popover';
+import React from "react";
+import Card from "react-bootstrap/Card";
+import CardDeck from "react-bootstrap/CardDeck";
+import Image from "react-bootstrap/Image";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
+import Spinner from "react-bootstrap/Spinner";
+import Button from "react-bootstrap/Button";
+import Popover from "react-bootstrap/Popover";
+import "./team_card.css";
 
-import './team_card.css';
-class Team_card extends React.Component
-{
+class Team_card extends React.Component {
   static defaultProps = {
-    status: 'current',
-    callback: (text) => alert(text)
+    status: "current",
+    callback: text => alert(JSON.stringify(text))
   };
-  handleclick (id)
-  {
+  handleclick(id) {
     this.props.callback(id);
   }
-  constructor(props)
-  {
+  constructor(props) {
     super(props);
     this.state = {
       error: null,
@@ -28,15 +25,13 @@ class Team_card extends React.Component
       team: {}
     };
   }
-  componentDidMount()
-  {
-    fetch('//api.deepdaemon.org/members/' + this.props.status, {
-      method: 'GET'
+  componentDidMount() {
+    fetch("//api.deepdaemon.org/members/" + this.props.status, {
+      method: "GET"
     })
-      .then((res) => res.json())
+      .then(res => res.json())
       .then(
-        (result) =>
-        {
+        result => {
           this.setState({
             isLoaded: true,
             team: result
@@ -45,8 +40,7 @@ class Team_card extends React.Component
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
         // exceptions from actual bugs in components.
-        (error) =>
-        {
+        error => {
           this.setState({
             isLoaded: true,
             error
@@ -55,41 +49,41 @@ class Team_card extends React.Component
       );
   }
 
-  render()
-  {
+  render() {
     const { error, isLoaded, team } = this.state;
-    if (error)
-    {
+    if (error) {
       return <div>Error: {error.message}</div>;
-    }
-    else if (!isLoaded)
-    {
-      return (<Button variant="primary" disabled>
-        <Spinner
-          as="span"
-          animation="grow"
-          size="sm"
-          role="status"
-          aria-hidden="true"
-        />
-        Loading...
+    } else if (!isLoaded) {
+      return (
+        <Button variant="primary" disabled>
+          <Spinner
+            as="span"
+            animation="grow"
+            size="sm"
+            role="status"
+            aria-hidden="true"
+          />
+          Loading...
         </Button>
       );
-    }
-    else
-    {
+    } else {
       return (
         <CardDeck>
-          {team.map((person) =>
-          {
+          {team.map(person => {
             return (
-              <Card key={person.id} className='team'>
+              <Card key={person.id} className="team">
                 <OverlayTrigger
-                  placement='auto'
-                  overlay={<Popover id={`popover_${person.id}`} title={person.name}>{person.short_desc}</Popover>} >
+                  placement="auto"
+                  overlay={
+                    <Popover id={`popover_${person.id}`} title={person.name}>
+                      {person.short_desc}
+                    </Popover>
+                  }>
                   <Image
                     roundedCircle
-                    src={`${process.env.PUBLIC_URL}/static/img/team/small/${person.photo_filename}`}
+                    src={`${process.env.PUBLIC_URL}/static/img/team/small/${
+                      person.photo_filename
+                    }`}
                     alt={person.photo_filename}
                     onClick={() => this.handleclick(person.id)}
                   />
@@ -97,40 +91,41 @@ class Team_card extends React.Component
                 <Card.Header>
                   <Card.Title>{person.name}</Card.Title>
                   <Card.Text>
-                    {
-                      person.career.map((item, key) =>
-                      {
-                        return (
-                          <span key={key}>
-                            <OverlayTrigger
-                              placement='top'
-                              overlay={<Tooltip>{person.career_long[key]}</Tooltip>} >
-                              <span className='from'>{item}</span>
-                            </OverlayTrigger>
-                            @
-                            <OverlayTrigger
-                              placement='top'
-                              overlay={<Tooltip>{person.school_long[key]}</Tooltip>} >
-                              <span className='from'>{person.school[key]}</span>
-                            </OverlayTrigger>
-                            <br />
-                          </span>
-                        );
-                      })
-                    }
+                    {person.career.map((item, key) => {
+                      return (
+                        <span key={key}>
+                          <OverlayTrigger
+                            placement="auto"
+                            overlay={
+                              <Tooltip>{person.career_long[key]}</Tooltip>
+                            }>
+                            <span className="from">{item}</span>
+                          </OverlayTrigger>
+                          @
+                          <OverlayTrigger
+                            placement="top"
+                            overlay={
+                              <Tooltip>{person.school_long[key]}</Tooltip>
+                            }>
+                            <span className="from">{person.school[key]}</span>
+                          </OverlayTrigger>
+                          <br />
+                        </span>
+                      );
+                    })}
                     <a
                       href={person.linkedin}
-                      target='_blank'
-                      alt='linkedin'
-                      rel='noopener noreferrer'>
-                      <span className='fab fa-linkedin' />
+                      target="_blank"
+                      alt="linkedin"
+                      rel="noopener noreferrer">
+                      <span className="fab fa-linkedin" />
                     </a>
                     <a
                       href={person.email ? `mailto:${person.email}` : null}
-                      target='_blank'
-                      alt='email'
-                      rel='noopener noreferrer'>
-                      <span className='fas fa-envelope' />
+                      target="_blank"
+                      alt="email"
+                      rel="noopener noreferrer">
+                      <span className="fas fa-envelope" />
                     </a>
                   </Card.Text>
                 </Card.Header>

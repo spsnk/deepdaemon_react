@@ -1,30 +1,30 @@
-import React from 'react';
-import { Tab, Nav } from 'react-bootstrap';
-import Team from './team_card';
-import './team_tabs.css';
+import React from "react";
+import { Tab, Nav } from "react-bootstrap";
+import Team from "./team_card";
+import "./team_tabs.css";
 
-const TeamTabs = ({ teams }) => {
+const TeamTabs = ({ callback }) => {
   return (
-    <Tab.Container id="left-tabs-example" defaultActiveKey="curr">
-      <Nav variant="pills" className="flex-row">
+    <Tab.Container defaultActiveKey="current">
+      <Nav className="teamtab">
         <Nav.Item>
-          <Nav.Link eventKey="curr">
+          <Nav.Link eventKey="current">
             <h1>Las Promesas</h1>
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="grad">
+          <Nav.Link eventKey="graduate">
             <h1>Los Egresados</h1>
           </Nav.Link>
         </Nav.Item>
       </Nav>
       <hr />
       <Tab.Content>
-        <Tab.Pane eventKey="curr">
-          <Team team={teams} sort status="current" />
+        <Tab.Pane eventKey="current">
+          <Team callback={callback} status="current" />
         </Tab.Pane>
-        <Tab.Pane eventKey="grad">
-          <Team team={teams} sort status="graduate" />
+        <Tab.Pane eventKey="graduate">
+          <Team callback={callback} status="graduate" />
         </Tab.Pane>
       </Tab.Content>
     </Tab.Container>

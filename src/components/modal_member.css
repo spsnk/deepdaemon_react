@@ -1,0 +1,15 @@
+.DeepModal img {
+  width: 15rem;
+  float: left;
+  margin: auto 20px auto auto;
+}
+
+.DeepModal .modal-header {
+  font-weight: 500;
+}
+.DeepModal .modal-body {
+  text-align: justify;
+  height: 23rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
