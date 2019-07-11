@@ -5,25 +5,20 @@ SET
 START TRANSACTION;
 SET
   time_zone = "+00:00";
-DROP DATABASE IF EXISTS `deepdaem_web`;
-CREATE DATABASE IF NOT EXISTS `deepdaem_web` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `deepdaem_web`;
-DROP TABLE IF EXISTS `career`;
 CREATE TABLE `career` (
     `id` int(10) UNSIGNED NOT NULL,
     `short_name` varchar(10) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
     `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
-DROP TABLE IF EXISTS `grade`;
 CREATE TABLE `grade` (
+    `id` int(10) UNSIGNED NOT NULL,
     `id_member` int(10) UNSIGNED NOT NULL DEFAULT '0',
-    `id_career` int(10) UNSIGNED NOT NULL DEFAULT '0',
     `id_school` int(10) UNSIGNED NOT NULL DEFAULT '0',
-    `type` enum('bachelor', 'masters', 'phd') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'bachelor',
-    `start` date NOT NULL,
-    `end` date NOT NULL
+    `id_career` int(10) UNSIGNED NOT NULL DEFAULT '0',
+    `type` enum('bachelor', 'masters', 'phd', 'work') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'bachelor',
+    `start` date DEFAULT NULL,
+    `end` date DEFAULT NULL
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
-DROP TABLE IF EXISTS `member`;
 CREATE TABLE `member` (
     `id` int(10) UNSIGNED NOT NULL,
     `name` varchar(25) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Alumno',
@@ -36,7 +31,6 @@ CREATE TABLE `member` (
     `photo_filename` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'user.png',
     `ss` tinyint(1) NOT NULL DEFAULT '0'
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
-DROP TABLE IF EXISTS `project`;
 CREATE TABLE `project` (
     `id` int(10) UNSIGNED NOT NULL,
     `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Proyecto',
@@ -47,23 +41,19 @@ CREATE TABLE `project` (
     `modal_type` enum('image', 'video', 'embed') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'image',
     `link` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
-DROP TABLE IF EXISTS `project_member`;
 CREATE TABLE `project_member` (
     `id_member` int(10) UNSIGNED NOT NULL,
     `id_project` int(10) UNSIGNED NOT NULL
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
-DROP TABLE IF EXISTS `project_tech`;
 CREATE TABLE `project_tech` (
     `id_project` int(10) UNSIGNED NOT NULL,
     `id_tech` int(10) UNSIGNED NOT NULL
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
-DROP TABLE IF EXISTS `school`;
 CREATE TABLE `school` (
     `id` int(10) UNSIGNED NOT NULL,
     `short_name` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
     `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
-DROP TABLE IF EXISTS `tech`;
 CREATE TABLE `tech` (
     `id` int(10) UNSIGNED NOT NULL,
     `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Tecnologia',
@@ -77,13 +67,15 @@ ADD
 ALTER TABLE
   `grade`
 ADD
-  PRIMARY KEY (`id_member`, `id_career`, `id_school`),
+  PRIMARY KEY (`id`),
 ADD
-  KEY `FK_grade_school` (`id_school`),
+  UNIQUE KEY `career` (`id_member`, `id_school`, `id_career`),
 ADD
   KEY `FK_grade_career` (`id_career`),
 ADD
-  KEY `FK_grade_student` (`id_member`);
+  KEY `FK_grade_student` (`id_member`),
+ADD
+  KEY `FK_grade_school` (`id_school`);
 ALTER TABLE
   `member`
 ADD
@@ -116,6 +108,10 @@ ADD
   PRIMARY KEY (`id`, `name`);
 ALTER TABLE
   `career`
+MODIFY
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE
+  `grade`
 MODIFY
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 ALTER TABLE
