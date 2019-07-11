@@ -27,10 +27,6 @@ class Modal_member extends React.Component {
       .then(res => res.json())
       .then(
         result => {
-          document.createElement("img").src =
-            process.env.PUBLIC_URL +
-            "/static/img/team/" +
-            result.photo_filename;
           this.setState({
             isLoaded: true,
             member: result
@@ -106,6 +102,10 @@ class Modal_member extends React.Component {
         </Modal>
       );
     } else {
+      const filename =
+        member.photo_filename != null
+          ? `${process.env.PUBLIC_URL}/static/img/team/${member.photo_filename}`
+          : require("../assets/img/user.png");
       return (
         <Modal
           centered
@@ -117,13 +117,7 @@ class Modal_member extends React.Component {
             <Modal.Title>{member.name}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Image
-              roundedCircle
-              src={`${process.env.PUBLIC_URL}/static/img/team/${
-                member.photo_filename
-              }`}
-              alt={member.photo_filename}
-            />
+            <Image roundedCircle src={filename} alt={filename} />
             {member.short_desc}
           </Modal.Body>
           <Modal.Footer>

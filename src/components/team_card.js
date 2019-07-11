@@ -70,6 +70,12 @@ class Team_card extends React.Component {
       return (
         <CardDeck>
           {team.map(person => {
+            const filename =
+              person.photo_filename != null
+                ? `${process.env.PUBLIC_URL}/static/img/team/small/${
+                    person.photo_filename
+                  }`
+                : require("../assets/img/user.png");
             return (
               <Card key={person.id} className="team">
                 <OverlayTrigger
@@ -81,10 +87,8 @@ class Team_card extends React.Component {
                   }>
                   <Image
                     roundedCircle
-                    src={`${process.env.PUBLIC_URL}/static/img/team/small/${
-                      person.photo_filename
-                    }`}
-                    alt={person.photo_filename}
+                    src={filename}
+                    alt={filename}
                     onClick={() => this.handleclick(person.id)}
                   />
                 </OverlayTrigger>
