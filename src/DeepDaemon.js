@@ -20,7 +20,7 @@ import ModalMember from "./components/modal_member";
 class DeepDaemon extends React.Component {
   constructor() {
     super();
-    this.themodal = React.createRef();
+    this.membermodal = React.createRef();
     this.home = React.createRef();
     this.about = React.createRef();
     this.portfolio = React.createRef();
@@ -34,7 +34,7 @@ class DeepDaemon extends React.Component {
   }
 
   updateModal(id) {
-    this.themodal.open(id);
+    this.membermodal.open(id);
   }
 
   render() {
@@ -145,7 +145,7 @@ class DeepDaemon extends React.Component {
             </p>
           </Container>
         </Container>
-        <Container className="section portfolio" ref={this.portfolio}>
+        <Container fluid className="section portfolio" ref={this.portfolio}>
           <h1>Proyectos increibles</h1>
           <hr />
           <Projects />
@@ -168,7 +168,7 @@ class DeepDaemon extends React.Component {
             </Col>
           </Row>
         </Container>
-        <Container fluid className="team_separator">
+        <Container className="team_separator">
           <Container className="section white">
             <h1>Inteligencia colectiva</h1>
             <hr />
@@ -215,7 +215,7 @@ class DeepDaemon extends React.Component {
         </Container>
         <ModalMember
           ref={ip => {
-            this.themodal = ip;
+            this.membermodal = ip;
           }}
         />
       </div>

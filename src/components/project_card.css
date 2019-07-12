@@ -1,13 +1,20 @@
 .project .card-footer {
-    margin-top: -63px;
-    text-align: right;
+  margin-top: -63px;
+  text-align: right;
 }
 
 .project.card {
-    min-width: 250px;
-    /*width: 350px;*/
+  min-width: 25rem;
+  max-width: 25rem;
+  margin: 1rem auto !important;
+  border: none;
 }
 
-.project.card:hover  {
-    border: 1px solid black ;
+.project.card:hover .card-header,
+.project.card:hover .card-img-bottom {
+  outline: 1px solid #007bff;
+}
+
+.project.card .card-header {
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
