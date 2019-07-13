@@ -4,6 +4,7 @@ import Image from "react-bootstrap/Image";
 import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
 import "./modal_member.css";
+import { Container } from "react-bootstrap";
 
 class Modal_member extends React.Component {
   constructor(props) {
@@ -68,22 +69,36 @@ class Modal_member extends React.Component {
               src={require("../assets/img/user.png")}
               alt="user.png"
             />
-            <Spinner
-              as="span"
-              animation="grow"
-              role="status"
-              aria-hidden="true"
-            />
-            Loading...
+            <Container className="member_content">
+              <Container>
+                <Spinner
+                  as="span"
+                  animation="grow"
+                  role="status"
+                  aria-hidden="true"
+                />
+                Loading...
+              </Container>
+              <Container>
+                <Spinner
+                  as="span"
+                  animation="grow"
+                  role="status"
+                  aria-hidden="true"
+                />
+                Loading...
+              </Container>
+            </Container>
           </Modal.Body>
           <Modal.Footer>
+            Loading...
             <Spinner
               as="span"
               animation="grow"
               role="status"
               aria-hidden="true"
+              size="sm"
             />
-            Loading...
           </Modal.Footer>
         </Modal>
       );
@@ -118,10 +133,25 @@ class Modal_member extends React.Component {
           </Modal.Header>
           <Modal.Body>
             <Image roundedCircle src={filename} alt={filename} />
-            {member.short_desc}
+            <Container className="member_content">
+              <Container>{member.long_desc}</Container>
+              <Container>
+                <b>Proyectos en los que ha participado:</b>
+                <ul>
+                  {member.projects.map((pj, key) => {
+                    return <li key={key}>{pj}</li>;
+                  })}
+                </ul>
+              </Container>
+            </Container>
           </Modal.Body>
           <Modal.Footer>
-            <Spinner animation="grow" />
+            <span className="fas fa-envelope" />
+            <span className="fab fa-linkedin" />
+            <span className="fab fa-facebook" />
+            <span className="fab fa-twitter" />
+            <span className="fab fa-github" />
+            <Spinner animation="grow" size="sm" />
           </Modal.Footer>
         </Modal>
       );

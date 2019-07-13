@@ -12,4 +12,12 @@
   height: 23rem;
   overflow-y: auto;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.DeepModal .member_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

@@ -168,7 +168,7 @@ class DeepDaemon extends React.Component {
             </Col>
           </Row>
         </Container>
-        <Container className="team_separator">
+        <Container fluid className="team_separator">
           <Container className="section white">
             <h1>Inteligencia colectiva</h1>
             <hr />

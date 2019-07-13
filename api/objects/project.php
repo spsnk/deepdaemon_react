@@ -3,43 +3,40 @@ class Project
 {
     // database connection and table name
     private $conn;
-    // object properties
-    public $id;
-    public $name;
-    public $desc;
-    public $impact;
-    public $front_img;
-    public $modal_img;
 
-    // constructor with $db as database connection
     public function __construct($db)
     {
         $this->conn = $db;
     }
 
-    function read_all()
+    public function read_all()
     {
         // select all query
-        $query =   "SELECT p.*
+        $query = "SELECT p.*
                     FROM project p
                     ORDER BY p.name;";
         // prepare query statement
         $stmt = $this->conn->prepare($query);
         // execute query
         $stmt->execute();
-        $this->parse($stmt);
+        $this->parse_all($stmt);
     }
 
-    function read($id)
+    public function read($id)
     {
-        // select all query
-        $query =   "SELECT p.*
-                    FROM project p
-                    WHERE p.id = $id
-                    ORDER BY p.name;";
-        // prepare query statement
+        $query = "SELECT p.id, p.name, p.`desc`, p.impact, p.modal_type, p.modal_media, p.link,
+                    GROUP_CONCAT(DISTINCT CONCAT(member.name, ' ', member.lastname) ORDER BY member.lastname) AS members,
+                    GROUP_CONCAT(DISTINCT tech.name ORDER BY tech.name) as tech_short,
+                    GROUP_CONCAT(DISTINCT tech.desc ORDER BY tech.name) as tech_long
+                  FROM project p
+                  LEFT JOIN project_tech ON project_tech.id_project = p.id
+                  LEFT JOIN tech ON tech.id = project_tech.id_tech
+                  LEFT JOIN project_member ON project_member.id_project = p.id
+                  LEFT JOIN member ON project_member.id_member = member.id
+                  WHERE p.id = $id
+                  GROUP BY p.id
+                  ORDER BY p.name;";
         $stmt = $this->conn->prepare($query);
-        // execute query
         $stmt->execute();
         $this->parse($stmt);
     }
@@ -47,44 +44,57 @@ class Project
     private function parse($stmt)
     {
         $num = $stmt->rowCount();
-        // check if more than 0 record found
-        if($num>0)
-        {
-            // projects array
-            $projects=array();
-            // retrieve our table contents
-            // fetch() is faster than fetchAll()
-            // http://stackoverflow.com/questions/2770630/pdofetchall-vs-pdofetch-in-a-loop
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-                // extract row
-                // this will make $row['name'] to
-                // just $name only
+        if ($num > 0) {
+            $projects = array();
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 extract($row);
+                $project = array(
+                    "id" => $id,
+                    "name" => $name,
+                    "desc" => $desc,
+                    "impact" => $impact,
+                    "members" => is_null($members) ? [] : explode(",", $members),
+                    "tech_short" => is_null($tech_short) ? [] : explode(",", $tech_short),
+                    "tech_long" => is_null($tech_long) ? [] : explode(",", $tech_long),
+                    "modal_media" => $modal_media,
+                    "modal_type" => $modal_type,
+                    "link" => $link
+                );
+                array_push($projects, $project);
+            }
+            http_response_code(200);
+            echo json_encode($projects);
+        } else {
+            http_response_code(404);
+            echo json_encode(
+                array("message" => "No projects found.")
+            );
+        }
+    }
 
-                $project=array(
-                    "id"=> $id,
+    private function parse_all($stmt)
+    {
+        $num = $stmt->rowCount();
+        if ($num > 0) {
+            $projects = array();
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                extract($row);
+                $project = array(
+                    "id" => $id,
                     "name" => $name,
                     "desc" => $desc,
                     "impact" => $impact,
                     "front_img" => $front_img,
                     "modal_media" => $modal_media,
                     "modal_type" => $modal_type,
-                    "link" => $link
+                    "link" => $link,
                 );
-                array_push($projects,$project);
+                array_push($projects, $project);
             }
-
-            // set response code - 200 OK
             http_response_code(200);
-
-            // show projects data in json format
             echo json_encode($projects);
-        }
-        else
-        {
-            // set response code - 404 Not found
+        } else {
             http_response_code(404);
-            // tell the user no projects found
             echo json_encode(
                 array("message" => "No projects found.")
             );
