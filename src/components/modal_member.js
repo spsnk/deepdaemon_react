@@ -1,10 +1,6 @@
 import React from "react";
-import Modal from "react-bootstrap/Modal";
-import Image from "react-bootstrap/Image";
-import Spinner from "react-bootstrap/Spinner";
-import Button from "react-bootstrap/Button";
+import {Modal, Image, Spinner, Button, Container} from "react-bootstrap";
 import "./modal_member.css";
-import { Container } from "react-bootstrap";
 
 class Modal_member extends React.Component {
   constructor(props) {

@@ -45,7 +45,6 @@ class Project
     {
         $num = $stmt->rowCount();
         if ($num > 0) {
-            $projects = array();
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 extract($row);
                 $project = array(
@@ -60,10 +59,9 @@ class Project
                     "modal_type" => $modal_type,
                     "link" => $link
                 );
-                array_push($projects, $project);
             }
             http_response_code(200);
-            echo json_encode($projects);
+            echo json_encode($project);
         } else {
             http_response_code(404);
             echo json_encode(

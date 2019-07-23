@@ -1,11 +1,17 @@
-import React from 'react';
-import Card from 'react-bootstrap/Card';
-import CardDeck from 'react-bootstrap/CardDeck';
-import Button from 'react-bootstrap/Button';
-import Spinner from 'react-bootstrap/Spinner';
-import './project_card.css';
+import React from "react";
+import Card from "react-bootstrap/Card";
+import CardDeck from "react-bootstrap/CardDeck";
+import Button from "react-bootstrap/Button";
+import Spinner from "react-bootstrap/Spinner";
+import "./project_card.css";
 
 class Project_card extends React.Component {
+  static defaultProps = {
+    callback: text => alert(JSON.stringify(text))
+  };
+  handleclick(id) {
+    this.props.callback(id);
+  }
   constructor(props) {
     super(props);
     this.state = {
@@ -15,7 +21,7 @@ class Project_card extends React.Component {
     };
   }
   componentDidMount() {
-    fetch('//api.deepdaemon.org/projects/', { method: 'GET' })
+    fetch("//api.deepdaemon.org/projects/", { method: "GET" })
       .then(res => res.json())
       .then(
         result => {
@@ -37,15 +43,16 @@ class Project_card extends React.Component {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return (<Button variant="primary" disabled>
-        <Spinner
-          as="span"
-          animation="grow"
-          size="sm"
-          role="status"
-          aria-hidden="true"
-        />
-        Loading...
+      return (
+        <Button variant="primary" disabled>
+          <Spinner
+            as="span"
+            animation="grow"
+            size="sm"
+            role="status"
+            aria-hidden="true"
+          />
+          Loading...
         </Button>
       );
     } else {
@@ -56,11 +63,21 @@ class Project_card extends React.Component {
               <Card.Header>{project.name}</Card.Header>
               <Card.Img
                 variant="bottom"
-                src={project.front_img?`${process.env.PUBLIC_URL}/static/img/project/${project.front_img}`:require('../assets/img/placeholder.jpg')}
+                src={
+                  project.front_img
+                    ? `${process.env.PUBLIC_URL}/static/img/project/${
+                        project.front_img
+                      }`
+                    : require("../assets/img/placeholder.jpg")
+                }
                 alt={project.front_img}
               />
               <Card.Footer>
-                <Button variant="primary">Ver más...</Button>
+                <Button
+                  variant="primary"
+                  onClick={() => this.handleclick(project.id)}>
+                  Ver más...
+                </Button>
               </Card.Footer>
             </Card>
           ))}

@@ -1,11 +1,39 @@
 .tech {
   text-align: center;
-  width: 30px;
-  line-height: 30px;
+  width: 40px;
+  line-height: 40px;
   display: inline-block;
-  padding: 5px;
-  margin: 2px;
+  margin: 0.5rem;
   border-radius: 50%;
   background-color: red;
   color: white;
+  cursor: default;
+}
+
+.DeepProjectModal .modal-content {
+  height: 90vh;
+}
+
+.DeepProjectModal .modal-body {
+  text-align: justify;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.DeepProjectModal .modal-body > .container {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.DeepProjectModal .media {
+  max-width: 50%;
+  max-height: 15rem;
+  margin: 0.5rem;
+}
+
+.DeepProjectModal .btn {
+  white-space: nowrap;
 }

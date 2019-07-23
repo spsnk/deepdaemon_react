@@ -16,11 +16,13 @@ import Projects from "./components/project_card";
 import Team from "./components/team_card";
 import TeamTabs from "./components/team_tabs";
 import ModalMember from "./components/modal_member";
+import ModalProject from "./components/modal_project";
 
 class DeepDaemon extends React.Component {
   constructor() {
     super();
     this.membermodal = React.createRef();
+    this.projectmodal = React.createRef();
     this.home = React.createRef();
     this.about = React.createRef();
     this.portfolio = React.createRef();
@@ -35,6 +37,10 @@ class DeepDaemon extends React.Component {
 
   updateModal(id) {
     this.membermodal.open(id);
+  }
+
+  openProject(id) {
+    this.projectmodal.open(id);
   }
 
   render() {
@@ -148,7 +154,7 @@ class DeepDaemon extends React.Component {
         <Container fluid className="section portfolio" ref={this.portfolio}>
           <h1>Proyectos increibles</h1>
           <hr />
-          <Projects />
+          <Projects callback={this.openProject.bind(this)} />
         </Container>
         <Container className="section">
           <Row>
@@ -216,6 +222,11 @@ class DeepDaemon extends React.Component {
         <ModalMember
           ref={ip => {
             this.membermodal = ip;
+          }}
+        />
+        <ModalProject
+          ref={ip => {
+            this.projectmodal = ip;
           }}
         />
       </div>

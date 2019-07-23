@@ -1,9 +1,14 @@
 import React from "react";
-import Modal from "react-bootstrap/Modal";
-import Image from "react-bootstrap/Image";
-import Spinner from "react-bootstrap/Spinner";
-import Button from "react-bootstrap/Button";
-import "./modal_member.css";
+import {
+  Modal,
+  Image,
+  Spinner,
+  Button,
+  Container,
+  OverlayTrigger,
+  Tooltip
+} from "react-bootstrap";
+import "./modal_project.css";
 
 class Modal_project extends React.Component {
   constructor(props) {
@@ -29,7 +34,7 @@ class Modal_project extends React.Component {
         result => {
           this.setState({
             isLoaded: true,
-            member: result
+            project: result
           });
         },
         error => {
@@ -42,7 +47,7 @@ class Modal_project extends React.Component {
   }
 
   render() {
-    const { error, isLoaded, member } = this.state;
+    const { error, isLoaded, project } = this.state;
     if (!isLoaded) {
       return (
         <Modal
@@ -62,20 +67,6 @@ class Modal_project extends React.Component {
               Loading...
             </Modal.Title>
           </Modal.Header>
-          <Modal.Body>
-            <Image
-              roundedCircle
-              src={require("../assets/img/user.png")}
-              alt="user.png"
-            />
-            <Spinner
-              as="span"
-              animation="grow"
-              role="status"
-              aria-hidden="true"
-            />
-            Loading...
-          </Modal.Body>
           <Modal.Footer>
             <Spinner
               as="span"
@@ -102,26 +93,89 @@ class Modal_project extends React.Component {
         </Modal>
       );
     } else {
-      const filename =
-        member.photo_filename != null
-          ? `${process.env.PUBLIC_URL}/static/img/team/${member.photo_filename}`
-          : require("../assets/img/user.png");
+      let media;
+      switch (project.modal_type) {
+        case "image":
+        default:
+          media = (
+            <Image
+              className="media"
+              src={
+                project.modal_media != null
+                  ? `${process.env.PUBLIC_URL}/static/img/project/${
+                      project.modal_media
+                    }`
+                  : require("../assets/img/project_detail.jpg")
+              }
+              alt={
+                project.modal_media != null
+                  ? `${process.env.PUBLIC_URL}/static/img/project/${
+                      project.modal_media
+                    }`
+                  : require("../assets/img/project_detail.jpg")
+              }
+            />
+          );
+          break;
+        case "video":
+          media = (
+            <video autoPlay loop className="media">
+              <source
+                src={
+                  project.modal_media != null
+                    ? `${process.env.PUBLIC_URL}/static/img/project/${
+                        project.modal_media
+                      }`
+                    : require("../assets/img/project_media.mp4")
+                }
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          );
+          break;
+      }
+
       return (
         <Modal
           centered
           size="lg"
-          className="DeepModal"
+          className="DeepProjectModal"
           show={this.state.showModal}
           onHide={this.close.bind(this)}>
           <Modal.Header closeButton>
-            <Modal.Title>{member.name}</Modal.Title>
+            <Modal.Title>{project.name}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Image roundedCircle src={filename} alt={filename} />
-            {member.short_desc}
+            <Container>{project.desc}</Container>
+            <Container>
+              {media}
+              {project.impact}
+            </Container>
+            <Container fluid>
+              <h3>Tecnologías</h3>
+              {project.tech_short.map((tc, key) => {
+                return (
+                  <OverlayTrigger
+                    key={key}
+                    placement="auto"
+                    overlay={<Tooltip>{project.tech_long[key]}</Tooltip>}>
+                    <span className="tech">{tc}</span>
+                  </OverlayTrigger>
+                );
+              })}
+            </Container>
           </Modal.Body>
           <Modal.Footer>
-            <Spinner animation="grow" />
+            <Container>
+              <h3>Autores</h3>
+              {project.members.map((member, key) => {
+                return <div key={key}>{member}</div>;
+              })}
+            </Container>
+            <Button variant="secondary" href={project.link} target="_blank">
+              Conocer más...
+            </Button>
           </Modal.Footer>
         </Modal>
       );
