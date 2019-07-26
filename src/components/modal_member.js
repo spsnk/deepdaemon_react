@@ -1,5 +1,5 @@
 import React from "react";
-import {Modal, Image, Spinner, Button, Container} from "react-bootstrap";
+import { Modal, Image, Spinner, Button, Container } from "react-bootstrap";
 import "./modal_member.css";
 
 class Modal_member extends React.Component {
@@ -115,7 +115,9 @@ class Modal_member extends React.Component {
     } else {
       const filename =
         member.photo_filename != null
-          ? `${process.env.PUBLIC_URL}/static/img/team/${member.photo_filename}`
+          ? `${process.env.PUBLIC_URL}/static/media/team/${
+              member.photo_filename
+            }`
           : require("../assets/img/user.png");
       return (
         <Modal

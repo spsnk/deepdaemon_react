@@ -49,11 +49,11 @@ class Member
         // select one by id query
         $query = "SELECT member.id, CONCAT( member.name, ' ', member.lastname) AS name,
                             member.linkedin, member.email, member.long_desc, member.photo_filename,
-                            GROUP_CONCAT( career.short_name ) AS `career`,
-                            GROUP_CONCAT( school.short_name ) AS `school`,
-                            GROUP_CONCAT( career.name ) AS career_long,
-                            GROUP_CONCAT( school.name ) AS school_long,
-                            GROUP_CONCAT( project.name ) AS projects
+                            GROUP_CONCAT( DISTINCT career.short_name ) AS `career`,
+                            GROUP_CONCAT( DISTINCT career.name ) AS career_long,
+                            GROUP_CONCAT( DISTINCT school.short_name ) AS `school`,
+                            GROUP_CONCAT( DISTINCT school.name ) AS school_long,
+                            GROUP_CONCAT( DISTINCT project.name ) AS projects
                     FROM member
                     LEFT JOIN grade  ON grade.id_member = member.id
                     LEFT JOIN career ON career.id = grade.id_career

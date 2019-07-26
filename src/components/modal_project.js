@@ -102,14 +102,14 @@ class Modal_project extends React.Component {
               className="media"
               src={
                 project.modal_media != null
-                  ? `${process.env.PUBLIC_URL}/static/img/project/${
+                  ? `${process.env.PUBLIC_URL}/static/media/project/${
                       project.modal_media
                     }`
                   : require("../assets/img/project_detail.jpg")
               }
               alt={
                 project.modal_media != null
-                  ? `${process.env.PUBLIC_URL}/static/img/project/${
+                  ? `${process.env.PUBLIC_URL}/static/media/project/${
                       project.modal_media
                     }`
                   : require("../assets/img/project_detail.jpg")
@@ -123,7 +123,7 @@ class Modal_project extends React.Component {
               <source
                 src={
                   project.modal_media != null
-                    ? `${process.env.PUBLIC_URL}/static/img/project/${
+                    ? `${process.env.PUBLIC_URL}/static/media/project/${
                         project.modal_media
                       }`
                     : require("../assets/img/project_media.mp4")
@@ -160,7 +160,17 @@ class Modal_project extends React.Component {
                     key={key}
                     placement="auto"
                     overlay={<Tooltip>{project.tech_long[key]}</Tooltip>}>
-                    <span className="tech">{tc}</span>
+                    <span
+                      className="tech"
+                      style={{
+                        backgroundColor: `rgb(${Math.floor(
+                          Math.random() * 256
+                        )},${Math.floor(Math.random() * 256)},${Math.floor(
+                          Math.random() * 256
+                        )})`
+                      }}>
+                      {tc}
+                    </span>
                   </OverlayTrigger>
                 );
               })}

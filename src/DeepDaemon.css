@@ -89,6 +89,8 @@ hr {
 .academy {
   background-image: url("./assets/img/bg/academy_bg.jpg");
   background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #012e4d;
   min-height: 300px;
   align-items: stretch;
   display: flex;

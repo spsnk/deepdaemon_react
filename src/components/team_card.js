@@ -72,7 +72,7 @@ class Team_card extends React.Component {
           {team.map(person => {
             const filename =
               person.photo_filename != null
-                ? `${process.env.PUBLIC_URL}/static/img/team/small/${
+                ? `${process.env.PUBLIC_URL}/static/media/team/small/${
                     person.photo_filename
                   }`
                 : require("../assets/img/user.png");

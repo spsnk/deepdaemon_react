@@ -5,9 +5,10 @@
   display: inline-block;
   margin: 0.5rem;
   border-radius: 50%;
-  background-color: red;
+  /*background-color: red;*/
   color: white;
   cursor: default;
+  text-shadow: 1px 1px 5px black;
 }
 
 .DeepProjectModal .modal-content {
