@@ -46,50 +46,52 @@ class DeepDaemon extends React.Component {
   render() {
     return (
       <div className="DeepDaemon" ref={this.home}>
-        <Navbar bg="dark" variant="dark" sticky="top">
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
           <Navbar.Brand>
             <img src={logo} style={{ width: "30px" }} alt="logo" />
             DeepDaemon
           </Navbar.Brand>
-          <Nav className="mr-auto">
-            <Nav.Link
-              onClick={() => {
-                this.scroll(this.home);
-              }}>
-              Home
-            </Nav.Link>
-            <Nav.Link
-              onClick={() => {
-                this.scroll(this.about);
-              }}>
-              Nosotros
-            </Nav.Link>
-            <Nav.Link
-              onClick={() => {
-                this.scroll(this.portfolio);
-              }}>
-              Proyectos
-            </Nav.Link>
-            <Nav.Link
-              onClick={() => {
-                this.scroll(this.leaders);
-              }}>
-              Líderes
-            </Nav.Link>
-            <Nav.Link
-              onClick={() => {
-                this.scroll(this.team);
-              }}>
-              Equipo
-            </Nav.Link>
-            <Nav.Link
-              onClick={() => {
-                this.scroll(this.contact);
-              }}>
-              Contacto
-            </Nav.Link>
-          </Nav>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse>
+            <Nav className="mr-auto">
+              <Nav.Link
+                onClick={() => {
+                  this.scroll(this.home);
+                }}>
+                Home
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  this.scroll(this.about);
+                }}>
+                Nosotros
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  this.scroll(this.portfolio);
+                }}>
+                Proyectos
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  this.scroll(this.leaders);
+                }}>
+                Líderes
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  this.scroll(this.team);
+                }}>
+                Equipo
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  this.scroll(this.contact);
+                }}>
+                Contacto
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
         </Navbar>
         <header className="dd_header">
           <img src={logo} className="ddlogo" alt="logo" />
