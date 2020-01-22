@@ -1,3 +1,37 @@
+# Lista de comandos para web DD
+
+## Para codigo de sitio web
+
+### 1. Descargar e instalar Git para la plataforma
+[https://git-scm.com/](https://git-scm.com/)
+### 2. Descargar e instalar NodeJS para la plataforma
+[https://nodejs.org/en/](https://nodejs.org/en/)
+### 3. Clonar el código fuente
+[https://github.com/spsnk/deepdaemon_react](https://github.com/spsnk/deepdaemon_react)
+Ejecutar el siguiente comando:
+1. `git clone https://github.com/spsnk/deepdaemon_react.git` 
+### 4. Instalar dependencias de NodeJS
+Ejecutar los siguientes comandos:
+1. `cd deepdaemon_react`
+2. `npm install`
+### 5. Iniciar servidor de desarrollo
+`npm start`
+### 6. Compilar el sitio
+`npm run build`
+
+## Para agregar a la base de datos
+### 1. Descargar e instalar HeidiSQL
+[https://www.heidisql.com/](https://www.heidisql.com/)
+### 2. Configurar una nueva conexión
+Introducir los siguientes datos (Modificar en caso de ser necesario):
+host: `deepdaemon.org`
+user: `deepdaem_web`
+database: `deepdaem_web`
+password: `LATLpc5y49i2`
+Si la base de datos no existe ver punto **2.a**.
+#### 2.a Crear y popular la base de datos
+Crear la base de datos y ejecutar los scripts SQL `database.sql` y `data.sql`.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
