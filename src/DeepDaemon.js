@@ -186,7 +186,7 @@ class DeepDaemon extends React.Component {
             </h2>
           </Container>
         </Container>
-        <Container className="section" ref={this.leaders}>
+        <Container fluid className="section" ref={this.leaders}>
           <h1>Los líderes</h1>
           <hr />
           <Team status="leader" callback={this.updateModal.bind(this)} />
