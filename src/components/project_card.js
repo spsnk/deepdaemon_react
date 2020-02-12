@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
 import Button from "react-bootstrap/Button";
 import Spinner from "react-bootstrap/Spinner";
+import Accordion from "react-bootstrap/Accordion";
 import "./project_card.css";
 
 class Project_card extends React.Component {
@@ -21,7 +22,7 @@ class Project_card extends React.Component {
     };
   }
   componentDidMount() {
-    fetch("//api.deepdaemon.org/projects/", { method: "GET" })
+    fetch("//localhost/deepdaemon_web_controller/projects/"+ this.props.state, { method: "GET" })
       .then(res => res.json())
       .then(
         result => {
@@ -59,27 +60,18 @@ class Project_card extends React.Component {
       return (
         <CardDeck>
           {projects.map(project => (
-            <Card key={project.id} className="project">
-              <Card.Header>{project.name}</Card.Header>
-              <Card.Img
-                variant="bottom"
-                src={
-                  project.front_img
-                    ? `${process.env.PUBLIC_URL}/static/img/project/${
-                        project.front_img
-                      }`
-                    : require("../assets/img/placeholder.jpg")
-                }
-                alt={project.front_img}
-              />
-              <Card.Footer>
-                <Button
-                  variant="primary"
-                  onClick={() => this.handleclick(project.id)}>
-                  Ver más...
-                </Button>
-              </Card.Footer>
-            </Card>
+              <Card key={project.id} className="project">
+                <Card.Header>
+                  <div>
+                  {project.name}
+                  </div>
+                  <Button
+                        variant="primary"
+                        onClick={() => this.handleclick(project.id)}>
+                        Ver más...
+                      </Button> 
+                </Card.Header>
+              </Card>
           ))}
         </CardDeck>
       );

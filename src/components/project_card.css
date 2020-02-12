@@ -4,8 +4,8 @@
 }
 
 .project.card {
-  min-width: 25rem;
-  max-width: 25rem;
+  min-width: 35rem;
+  max-width: 35rem;
   margin: 1rem auto !important;
   border: none;
 }

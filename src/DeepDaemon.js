@@ -17,6 +17,7 @@ import Team from "./components/team_card";
 import TeamTabs from "./components/team_tabs";
 import ModalMember from "./components/modal_member";
 import ModalProject from "./components/modal_project";
+import {Tabs, Tab } from "react-bootstrap";
 
 class DeepDaemon extends React.Component {
   constructor() {
@@ -154,9 +155,16 @@ class DeepDaemon extends React.Component {
           </Container>
         </Container>
         <Container fluid className="section portfolio" ref={this.portfolio}>
-          <h1>Proyectos increibles</h1>
-          <hr />
-          <Projects callback={this.openProject.bind(this)} />
+        <h1>Proyectos increibles</h1>
+        <hr />
+          <Tabs defaultActiveKey="inDevelop">
+            <Tab title="En Desarrollo"eventKey="inDevelop">
+              <Projects state="inDevelop" callback={this.openProject.bind(this)} />
+            </Tab>
+            <Tab title="Articulos" eventKey="article">
+            <Projects state="finish" callback={this.openProject.bind(this)} />
+            </Tab>
+          </Tabs>
         </Container>
         <Container className="section">
           <Row>
@@ -224,6 +232,7 @@ class DeepDaemon extends React.Component {
         <ModalMember
           ref={ip => {
             this.membermodal = ip;
+            console.log(this.membermodal);
           }}
         />
         <ModalProject
