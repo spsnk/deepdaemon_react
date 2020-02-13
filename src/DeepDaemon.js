@@ -156,15 +156,18 @@ class DeepDaemon extends React.Component {
         </Container>
         <Container fluid className="section portfolio" ref={this.portfolio}>
         <h1>Proyectos increibles</h1>
-        <hr />
-          <Tabs defaultActiveKey="inDevelop">
-            <Tab title="En Desarrollo"eventKey="inDevelop">
-              <Projects state="inDevelop" callback={this.openProject.bind(this)} />
-            </Tab>
-            <Tab title="Articulos" eventKey="article">
-            <Projects state="finish" callback={this.openProject.bind(this)} />
-            </Tab>
-          </Tabs>
+
+          <Tab.Container defaultActiveKey="inDevelop">
+            <Nav className="projects">
+              <Nav.Item><Nav.Link eventKey="inDevelop"><h1>En desarrollo</h1></Nav.Link></Nav.Item>
+              <Nav.Item><Nav.Link eventKey="article"><h1>Articulos</h1></Nav.Link></Nav.Item>
+            </Nav>
+            <hr />
+            <Tab.Content>
+                <Tab.Pane eventKey="inDevelop"><Projects state="inDevelop" callback={this.openProject.bind(this)} /></Tab.Pane>
+                <Tab.Pane eventKey="article"><Projects state="finish" callback={this.openProject.bind(this)} /></Tab.Pane>
+            </Tab.Content>
+          </Tab.Container>
         </Container>
         <Container className="section">
           <Row>

@@ -57,12 +57,31 @@ class Project_card extends React.Component {
         </Button>
       );
     } else {
+      const media = (
+        <Card.Img
+          src={
+            projects.front_img != null
+              ? `${process.env.PUBLIC_URL}/static/media/project/${
+                  projects.front_img
+                }`
+              : require("../assets/img/placeholder.jpg")
+          }
+          alt={
+            projects.modal_media != null
+              ? `${process.env.PUBLIC_URL}/static/media/project/${
+                  projects.front_img
+                }`
+              : require("../assets/img/placeholder.jpg")
+          }
+        />
+      );
       return (
         <CardDeck>
           {projects.map(project => (
               <Card key={project.id} className="project">
                 <Card.Header>
-                  <div>
+                {media}
+                  <div className="projectTitle">
                   {project.name}
                   </div>
                   <Button
