@@ -160,7 +160,7 @@ class DeepDaemon extends React.Component {
           <Tab.Container defaultActiveKey="inDevelop">
             <Nav className="projects">
               <Nav.Item><Nav.Link eventKey="inDevelop"><h1>En desarrollo</h1></Nav.Link></Nav.Item>
-              <Nav.Item><Nav.Link eventKey="article"><h1>Articulos</h1></Nav.Link></Nav.Item>
+              <Nav.Item><Nav.Link eventKey="article"><h1>Artículos</h1></Nav.Link></Nav.Item>
             </Nav>
             <hr />
             <Tab.Content>
