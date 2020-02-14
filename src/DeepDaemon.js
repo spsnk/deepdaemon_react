@@ -8,7 +8,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
 import logo from "./assets/img/deepdaemon.png";
-import join from "./assets/img/join_team.png";
+import join from "./assets/img/kissclipart-logo-intelligence-clipart-machine-learning-artific-0eb8b24961c90301.png";
 import "./assets/icomoon/icomoon.css"; //https://icomoon.io/#preview-free
 
 import "./DeepDaemon.css";
@@ -160,7 +160,7 @@ class DeepDaemon extends React.Component {
           <Tab.Container defaultActiveKey="inDevelop">
             <Nav className="projects">
               <Nav.Item><Nav.Link eventKey="inDevelop"><h1>En desarrollo</h1></Nav.Link></Nav.Item>
-              <Nav.Item><Nav.Link eventKey="article"><h1>Artículos</h1></Nav.Link></Nav.Item>
+              <Nav.Item><Nav.Link eventKey="article"><h1>Concluidos</h1></Nav.Link></Nav.Item>
             </Nav>
             <hr />
             <Tab.Content>
@@ -172,7 +172,7 @@ class DeepDaemon extends React.Component {
         <Container className="section">
           <Row>
             <Col md="auto">
-              <Image src={join} style={{ height: "350px" }} fluid />
+              <Image src={join} style={{ height: "320px" }} fluid />
             </Col>
             <Col>
               <h1>Únete al equipo!</h1>
