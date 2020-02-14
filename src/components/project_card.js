@@ -65,7 +65,7 @@ class Project_card extends React.Component {
                 ? `${process.env.PUBLIC_URL}/static/media/project/${
                     projects.front_img
                   }`
-                : require("../assets/img/placeholder.jpg")
+                : require("../assets/img/join_team.png")
             }
             alt={
               projects.modal_media != null
